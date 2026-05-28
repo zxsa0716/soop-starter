@@ -1,0 +1,73 @@
+{
+  "persona_id": "P-03",
+  "name": "박재훈",
+  "age": 45,
+  "occupation": "회사원",
+  "scenario_summary": "5년 후 회사 퇴직. 표고 + 산림탄소상쇄 KOC 등록 추가 수익. 진안 부귀면 임야 보유.",
+  "raw_input": "저는 45세 회사원입니다. 부친 임야 3ha를 상속받았어요, 진안에. 5년 후 퇴직과 동시에 본격 전환할 계획이고, 표고에 KOC 등록까지 노리고 있습니다. 자본은 1.5억 정도 됩니다.",
+  "hit_policy_2026": "산림 미래혁신센터 90억 (NEW)",
+  "demo_time_seconds": 14,
+  "module_results": {
+    "extract_user_profile": {
+      "age": 45, "family_size": null, "capital_won": 150000000,
+      "farm_experience": "none", "transition_type": "퇴직 후 전환",
+      "region_preferences": ["전북특별자치도"],
+      "inherited_lot_pnu": "4577034021300010000", "inherited_lot_area_ha": 3.0,
+      "interested_products": ["표고"], "risk_appetite": "moderate",
+      "planning_horizon_years": 5,
+      "primary_goal": "5년 후 퇴직 + 상속 임야 활용 + 표고 + KOC 등록",
+      "secondary_goals": ["산림탄소상쇄 KOC"],
+      "eligible_for_young_subsidy": false,
+      "available_for_40h_training": true,
+      "completeness_score": 0.75
+    },
+    "filter_candidate_villages": {
+      "villages": [
+        {"admin_code": "4577034000", "name": "전북특별자치도 진안군 부귀면",
+         "population": 1700, "forest_ratio": 0.85, "composite_score": 0.93}
+      ],
+      "n_in": 466, "n_out": 1, "note": "상속 임야 PNU로 직접 매칭"
+    },
+    "recommend_forest_products": {
+      "recommendations": [
+        {"product": {"code": "P_001", "name_ko": "표고", "category": "버섯", "cycle_years": 5},
+         "score": 0.91, "expected_yield_kg_per_ha": 850,
+         "standard_initial_cost_won": 25000000,
+         "typical_5yr_revenue": {"p10": 95000000, "p50": 180000000, "p90": 350000000}},
+        {"product": {"code": "P_KOC", "name_ko": "산림탄소상쇄 KOC", "category": "탄소", "cycle_years": 5},
+         "score": 0.78, "typical_5yr_revenue": {"p10": 5000000, "p50": 12000000, "p90": 25000000},
+         "shap_values": [{"feature": "lot_area_ha", "value": 3.0, "shap": 0.32, "direction": "positive",
+                          "plain_text": "상속 임야 3ha가 KOC 등록 면적 fit (+0.32)"}]}
+      ]
+    },
+    "simulate_5year_income": {
+      "village_admin_code": "4577034000", "product_code": "P_001",
+      "capital_bracket": "1.5억", "area_bracket": "1ha+",
+      "cumulative_5y_p10_won": 95000000,
+      "cumulative_5y_p50_won": 180000000,
+      "cumulative_5y_p90_won": 350000000,
+      "nong_eo_chon_median_p50_won": 95000000,
+      "calibration_error_pct": 9.8
+    },
+    "assess_shimter_eligibility": {
+      "is_eligible": true,
+      "cost_estimate": {"total_p10_won": 35275000, "total_p50_won": 41500000, "total_p90_won": 47725000},
+      "recommended_design": "33㎡ 목조 + 20㎡ 데크 + 정화조 + 주차장 + 인허가"
+    },
+    "match_subsidies_timeline": {
+      "matched_subsidies": [
+        {"code": "SUB_HUGYEJA", "name": "임업후계자 (55세 미만 ✅ + 3ha ✅)"},
+        {"code": "SUB_MIRAE", "name": "산림 미래혁신센터 90억 (2026 NEW) 모니터링", "is_2026_new": true},
+        {"code": "SUB_LOAN_SUPP", "name": "임업정책자금 숲가꾸기 1.0% / 35년"},
+        {"code": "SUB_KOC", "name": "산림탄소상쇄 KOC 등록 (산림탄소센터 042-603-7315)"},
+        {"code": "SUB_DIRECT_PAY", "name": "임업직불금 ha당 60만원"}
+      ],
+      "this_week_top_action": {
+        "year": 1, "quarter": "Q1",
+        "title": "임업후계자 즉시 등록 + 산림경영계획 수립",
+        "is_this_week_action": true
+      }
+    }
+  },
+  "final_summary": "진안 부귀면 본인 임야 + 표고 + KOC 등록까지가 가장 fit합니다. 5년 P50 +1.8억 (KOC 포함). 산림 미래혁신센터 90억 신규 사업 모니터링 + 임업정책자금 1.0%/35년 활용. 이번 주 1번 액션은 임업후계자 즉시 등록과 산림경영계획 수립입니다."
+}

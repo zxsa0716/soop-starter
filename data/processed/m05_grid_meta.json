@@ -1,0 +1,9 @@
+{
+  "synth": true,
+  "n_villages": 50,
+  "n_products": 10,
+  "n_cells": 10000,
+  "trajectories_per_cell": 500,
+  "elapsed_sec": 10.268133878707886,
+  "note": "Sandbox quick — W4 full run = 466 × 10 × 5 × 4 × 2000 = 93,200 × 2000 trajectories"
+}

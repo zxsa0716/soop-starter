@@ -1,0 +1,15 @@
+{
+  "synth": true,
+  "r2": 0.36191715065453334,
+  "mae": 0.06415005759531034,
+  "n_features": 79,
+  "n_train": 19385,
+  "n_test": 4847,
+  "note": "합성 데이터 학습 — 실데이터(다드림 52품목 + KoMIS + FGIS) 도착 후 swap",
+  "ablation_targets": {
+    "v0_dadream_baseline": "9 features only (다드림 단독)",
+    "v1_komis_30y": "+ 4 KoMIS features → R² target +0.03",
+    "v2_nfi_microdata": "+ NFI 임분조사 → R² target +0.05",
+    "v3_sentinel_ndvi": "+ Sentinel-2 NDVI seasonality → R² target +0.06"
+  }
+}

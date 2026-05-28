@@ -1,0 +1,150 @@
+{
+  "persona_id": "P-01",
+  "name": "김도현",
+  "age": 35,
+  "occupation": "IT 시니어 백엔드",
+  "scenario_summary": "강남 시니어 백엔드. 강원도 표고 희망. 주말농장 시작 → 5년 점진 전환 + 원격근무 유지.",
+  "raw_input": "저는 35세 IT 직장인이고요, 자본 5천만 정도로 강원도에 가서 표고를 키우고 싶어요. 처음엔 주말농장처럼 시작해서 5년 안에 점진적으로 전환하고 싶습니다. 가족은 아내랑 둘이고, 아직 아이는 없어요.",
+  "hit_policy_2026": "산촌체류형 쉼터 (NEW)",
+  "demo_time_seconds": 14,
+  "module_results": {
+    "extract_user_profile": {
+      "age": 35, "family_size": 2, "capital_won": 50000000,
+      "monthly_required_income_won": 4000000, "farm_experience": "none",
+      "technical_skills": ["IT", "백엔드", "원격근무"],
+      "transition_type": "주말농장형",
+      "region_preferences": ["강원특별자치도"],
+      "max_distance_from_seoul_km": 200,
+      "lifestyle_preferences": ["nature", "healing"],
+      "interested_products": ["표고"],
+      "risk_appetite": "moderate", "planning_horizon_years": 5,
+      "inherited_lot_pnu": null, "inherited_lot_area_ha": null,
+      "own_house_in_target_region": false,
+      "primary_goal": "주말농장처럼 시작 → 5년 안에 점진 전환",
+      "secondary_goals": ["원격근무 유지"],
+      "available_for_40h_training": true, "eligible_for_young_subsidy": true,
+      "sigungu_residence": "서울특별시 강남구", "plans_to_register_business": true,
+      "remote_work_eligible": true,
+      "spouse_support_level": "full", "has_existing_loans": false,
+      "completeness_score": 0.78
+    },
+    "filter_candidate_villages": {
+      "villages": [
+        {"admin_code": "4276034000", "name": "강원특별자치도 평창군 진부면",
+         "population": 4200, "forest_ratio": 0.79, "distance_to_seoul_km": 180,
+         "composite_score": 0.91, "has_2026_new_policy_hit": ["산촌체류형 쉼터"]},
+        {"admin_code": "4282034000", "name": "강원특별자치도 홍천군 내면",
+         "population": 1900, "forest_ratio": 0.83, "distance_to_seoul_km": 165,
+         "composite_score": 0.85},
+        {"admin_code": "4283034000", "name": "강원특별자치도 횡성군 안흥면",
+         "population": 3100, "forest_ratio": 0.71, "distance_to_seoul_km": 130,
+         "composite_score": 0.83}
+      ],
+      "n_in": 466, "n_out": 12, "axes_used": ["spatial", "lifestyle", "safety"]
+    },
+    "recommend_forest_products": {
+      "recommendations": [
+        {
+          "product": {"code": "P_001", "name_ko": "표고", "category": "버섯", "cycle_years": 5},
+          "score": 0.91,
+          "confidence_interval": [0.86, 0.94],
+          "expected_yield_kg_per_ha": 800,
+          "standard_initial_cost_won": 12000000,
+          "typical_5yr_revenue": {"p10": 60000000, "p50": 120000000, "p90": 225000000},
+          "shap_values": [
+            {"feature": "forest_cover_pct", "value": 0.79, "shap": 0.21, "direction": "positive",
+             "plain_text": "산림 피복률 79%가 골목 설치에 적합 (+0.21)"},
+            {"feature": "temp_30y_mean_c", "value": 8.2, "shap": 0.18, "direction": "positive",
+             "plain_text": "연평균 8.2℃가 표고 균사 활성에 적합 (+0.18)"},
+            {"feature": "ktx_min", "value": 12, "shap": 0.15, "direction": "positive",
+             "plain_text": "KTX 12분이 주말농장형에 fit (+0.15)"}
+          ],
+          "citation_dadream_url": "https://gis.kofpi.or.kr/dad_user/?product=P_001"
+        }
+      ],
+      "baseline_ablation": {"dadream_r2": 0.61, "ours_v3_r2": 0.67, "delta_vs_baseline": 0.06}
+    },
+    "simulate_5year_income": {
+      "village_admin_code": "4276034000", "product_code": "P_001",
+      "capital_bracket": "5천만", "area_bracket": "0.3ha",
+      "annual_points": [
+        {"year": 1, "p10_won": -15000000, "p50_won": -8000000, "p90_won": 2000000,
+         "cumulative_p10_won": -15000000, "cumulative_p50_won": -8000000, "cumulative_p90_won": 2000000},
+        {"year": 2, "p10_won": -2000000, "p50_won": 12000000, "p90_won": 28000000,
+         "cumulative_p10_won": -17000000, "cumulative_p50_won": 4000000, "cumulative_p90_won": 30000000},
+        {"year": 3, "p10_won": 8000000, "p50_won": 25000000, "p90_won": 45000000,
+         "cumulative_p10_won": -9000000, "cumulative_p50_won": 29000000, "cumulative_p90_won": 75000000},
+        {"year": 4, "p10_won": 18000000, "p50_won": 38000000, "p90_won": 65000000,
+         "cumulative_p10_won": 9000000, "cumulative_p50_won": 67000000, "cumulative_p90_won": 140000000},
+        {"year": 5, "p10_won": 28000000, "p50_won": 52000000, "p90_won": 85000000,
+         "cumulative_p10_won": 27000000, "cumulative_p50_won": 119000000, "cumulative_p90_won": 225000000}
+      ],
+      "cumulative_5y_p10_won": 27000000,
+      "cumulative_5y_p50_won": 119000000,
+      "cumulative_5y_p90_won": 225000000,
+      "nong_eo_chon_median_p50_won": 84000000,
+      "calibration_error_pct": 10.6
+    },
+    "assess_shimter_eligibility": {
+      "rule_sanji_area_400sqm_plus": true,
+      "rule_site_under_100sqm": true,
+      "rule_floor_area_under_33sqm": true,
+      "rule_im_eob_yong_sanji": true,
+      "rule_direct_road_access": true,
+      "rule_outside_disaster_zone": true,
+      "rule_no_fire_equipment": true,
+      "is_eligible": true,
+      "cost_estimate": {
+        "foundation": 2500000, "main_structure_wood_33sqm": 28000000,
+        "deck": 4000000, "septic_tank": 2500000, "driveway": 3500000, "permit": 1000000,
+        "total_p10_won": 35275000, "total_p50_won": 41500000, "total_p90_won": 47725000
+      },
+      "recommended_design": "33㎡ 목조 본체 + 20㎡ 데크 + 정화조 + 주차장 + 인허가",
+      "next_step_guidance": "산지전용통합정보시스템 1644-0672 신청 + 평창군 산림과 방문",
+      "rule_violations": []
+    },
+    "match_subsidies_timeline": {
+      "matched_subsidies": [
+        {"code": "SUB_HUGYEJA", "name": "임업후계자 양성과정 4월 1기", "amount_won": 0},
+        {"code": "SUB_PCNG_YOUNG", "name": "평창군 청년 정착지원금", "amount_won": 15000000},
+        {"code": "SUB_LOAN_SHORT", "name": "산림조합 단기소득자금 2.0%/5년", "amount_won": 50000000}
+      ],
+      "timeline": [
+        {"year": 1, "quarter": "Q2", "title": "임업후계자 4월 1기 신청 (마감 4/15)", "is_this_week_action": true},
+        {"year": 1, "quarter": "Q2", "title": "임업경영체 등록 (foco.go.kr)"},
+        {"year": 1, "quarter": "Q3", "title": "평창군 청년 정착지원금 1,500만 신청"},
+        {"year": 2, "quarter": "Q1", "title": "다드림 가입 + 매물 A PNU 등록"},
+        {"year": 5, "quarter": "Q2", "title": "임업직불금 신청"}
+      ],
+      "this_week_top_action": {
+        "year": 1, "quarter": "Q2",
+        "title": "임업후계자 4월 1기 양성과정 신청",
+        "description": "시니어공유경제연구원 40시간 비대면, 마감 4/15",
+        "is_this_week_action": true
+      },
+      "total_expected_subsidy_5y_won": 65000000
+    },
+    "find_mentors_and_cooperatives": {
+      "nearest_cooperative": {
+        "id": "cooperative_4276", "name": "평창산림조합", "phone": "033-332-XXXX",
+        "available_loan_rates": {"sup_fillment": 1.0, "short_term_income": 2.0}
+      },
+      "top_mentors": [
+        {"id": "M_001", "name_initial": "박OO", "type": "individual_mentor",
+         "specialty_product_codes": ["P_001"], "years_experience": 18, "trust_score": 0.92}
+      ],
+      "nearest_education_courses": [
+        {"course_id": "FHI_2026_1", "name": "2026년 임업후계자 양성과정 1기",
+         "provider": "시니어공유경제연구원", "is_online": true, "hours_total": 40,
+         "apply_deadline": "2026-04-10"}
+      ],
+      "this_week_action": "임업후계자 4월 1기 양성과정 신청 (마감 4/15)",
+      "confidence_score": 0.88
+    },
+    "score_lifestyle_axes": {
+      "village_code": "4276034000", "radius_km": 5.0,
+      "axes": {"hiking": 0.82, "healing": 0.71, "leisure": 0.78, "nature_access": 0.86, "composite": 0.79}
+    }
+  },
+  "final_summary": "평창 진부면 + 표고 + 매물 A가 가장 fit합니다. 5년 P50 1.2억, P90 2.25억. 자본 5천 + 산림조합 자금 5천 = 1.0억 fit. 이번 주 1번 액션은 임업후계자 4월 1기 교육 신청 (마감 4/15)."
+}

@@ -1,0 +1,79 @@
+{
+  "persona_id": "P-04",
+  "name": "정민호",
+  "age": 30,
+  "occupation": "IT 풀스택 개발자 (대구)",
+  "scenario_summary": "대구 거주 풀스택. 자본 3천만으로 경북 영양군 임산물 스마트팜 임대 진입. 어수리 재배. 18~40세 청년 자격 ✅.",
+  "raw_input": "30세 IT입니다. 대구 사는데 자본 3천만으로 영양 어수리 임산물 스마트팜 임대 들어가고 싶어요. 18~40세 청년 자격 됩니다.",
+  "hit_policy_2026": "★ 영양 임산물 스마트팜 105억 (2026~2028 NEW)",
+  "demo_time_seconds": 14,
+  "module_results": {
+    "extract_user_profile": {
+      "age": 30, "family_size": 1, "capital_won": 30000000,
+      "farm_experience": "none", "technical_skills": ["IT", "풀스택"],
+      "transition_type": "즉시 전환",
+      "region_preferences": ["경상북도"], "sigungu_residence": "대구광역시",
+      "interested_products": ["어수리"], "risk_appetite": "moderate",
+      "planning_horizon_years": 5,
+      "primary_goal": "영양 임산물 스마트팜 임대 진입",
+      "secondary_goals": ["2026 영양 105억 사업", "임대형 0.4ha 3년"],
+      "eligible_for_young_subsidy": true,
+      "available_for_40h_training": true, "remote_work_eligible": true,
+      "completeness_score": 0.74
+    },
+    "filter_candidate_villages": {
+      "villages": [
+        {"admin_code": "4776034000", "name": "경상북도 영양군 일월면",
+         "population": 1200, "forest_ratio": 0.78, "composite_score": 0.93,
+         "has_2026_new_policy_hit": ["영양 임산물 스마트팜 105억"]}
+      ],
+      "n_in": 466, "n_out": 1, "note": "영양 도곡리 스마트팜 단지 직접 매칭"
+    },
+    "recommend_forest_products": {
+      "recommendations": [
+        {"product": {"code": "P_LEAF_EOSURI", "name_ko": "어수리", "category": "잎", "cycle_years": 2,
+                     "smart_farm_eligible": true},
+         "score": 0.94, "expected_yield_kg_per_ha": 3500,
+         "standard_initial_cost_won": 8000000,
+         "typical_5yr_revenue": {"p10": 150000000, "p50": 270000000, "p90": 420000000},
+         "shap_values": [
+           {"feature": "smart_farm_eligible", "value": 1, "shap": 0.41, "direction": "positive",
+            "plain_text": "어수리는 시설재배 시 노지 대비 5배 수확량, 딸기 대비 5.7배 소득 (+0.41)"}
+         ]}
+      ]
+    },
+    "simulate_5year_income": {
+      "village_admin_code": "4776034000", "product_code": "P_LEAF_EOSURI",
+      "capital_bracket": "2천만", "area_bracket": "0.5ha",
+      "cumulative_5y_p10_won": 150000000,
+      "cumulative_5y_p50_won": 270000000,
+      "cumulative_5y_p90_won": 420000000,
+      "calibration_error_pct": 11.5
+    },
+    "assess_shimter_eligibility": {
+      "is_eligible": false,
+      "rule_violations": ["rule_im_eob_yong_sanji"],
+      "next_step_guidance": "스마트팜 임대형 → 쉼터 불가. 영양군 단지 내 숙소 안내"
+    },
+    "match_subsidies_timeline": {
+      "matched_subsidies": [
+        {"code": "SUB_YEONG_YANG", "name": "★ 영양 임산물 스마트팜 105억 (18~40세 청년 ✅)",
+         "is_2026_new": true, "amount_won": 0,
+         "eligibility_age_min": 18, "eligibility_age_max": 40},
+        {"code": "SUB_HUGYEJA", "name": "임업후계자 (즉시 전환형)"},
+        {"code": "SUB_YY_YOUNG", "name": "영양군 청년 귀산촌 지원금", "amount_won": 10000000}
+      ],
+      "this_week_top_action": {
+        "year": 1, "quarter": "Q1",
+        "title": "영양 임산물 스마트팜 공모 신청 일정 확인",
+        "description": "경상북도·영양군 공고 사이트 + 영양군 산림과 직접 문의",
+        "is_this_week_action": true
+      }
+    },
+    "find_mentors_and_cooperatives": {
+      "nearest_cooperative": {"id": "cooperative_4776", "name": "영양산림조합", "phone": "054-682-XXXX"},
+      "this_week_action": "영양 임산물 스마트팜 공모 일정 + 어수리 종묘 leads 문의"
+    }
+  },
+  "final_summary": "영양 일월면 임산물 스마트팜 105억 단지가 가장 fit합니다. 18~40세 청년 자격 ✅, 임대형 0.4~0.5ha 3년 + 3년 연장. 5년 P50 +2.7억. 이번 주 1번 액션은 영양 임산물 스마트팜 공모 일정 확인입니다 (2026~2028)."
+}

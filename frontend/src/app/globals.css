@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --forest-deep: #1F3320;
+  --forest:      #2D4A2B;
+  --paper:       #F5EFE3;
+  --bark:        #3F2A1D;
+  --ochre:       #B8893E;
+}
+
+html, body { background: var(--paper); }
+.leaflet-container { background: var(--paper); height: 100%; width: 100%; }
