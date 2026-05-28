@@ -1,0 +1,14 @@
+{
+  "synth": true,
+  "generated_by": "ml/m03_generate_mock_features.py",
+  "seed": 42,
+  "n_villages": 466,
+  "n_products": 52,
+  "n_features": 28,
+  "note": "Replace with real data: FGIS 임상도·토양도 + KoMIS 30y + Sentinel-2 NDVI + 다드림 52품목.",
+  "swap_targets": [
+    "village_features_466.parquet → DAG1 + DAG2 + DAG5 outputs",
+    "products_52.parquet → 다드림 52품목 catalog (gis.kofpi.or.kr)",
+    "suitability_466x52.parquet → 다드림 재배적지 supervised label"
+  ]
+}

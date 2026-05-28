@@ -1,0 +1,70 @@
+{
+  "persona_id": "P-02",
+  "name": "이수진",
+  "age": 28,
+  "occupation": "프리랜서 디자이너",
+  "scenario_summary": "임업 경험 전무. 산림조합 인턴십 6개월 같은 학습 경로 우선시. 충북 산양삼 희망.",
+  "raw_input": "28세 디자이너고 자본은 2천만 정도, 임업은 처음이에요. 충북 가서 산양삼 키워보고 싶고 산림조합 인턴십처럼 학습할 수 있는 곳이 좋아요.",
+  "hit_policy_2026": "임업후계자 양성과정 + 산림형 예비사회적 기업 인턴",
+  "demo_time_seconds": 14,
+  "module_results": {
+    "extract_user_profile": {
+      "age": 28, "family_size": 1, "capital_won": 20000000,
+      "farm_experience": "none", "transition_type": "학습 우선",
+      "region_preferences": ["충청북도"], "interested_products": ["산양삼"],
+      "risk_appetite": "conservative", "planning_horizon_years": 5,
+      "primary_goal": "학습 경로 우선, 소규모 시작",
+      "eligible_for_young_subsidy": true, "available_for_40h_training": true,
+      "remote_work_eligible": true, "completeness_score": 0.70
+    },
+    "filter_candidate_villages": {
+      "villages": [
+        {"admin_code": "4313034000", "name": "충청북도 충주시 살미면",
+         "population": 2100, "forest_ratio": 0.74, "composite_score": 0.88},
+        {"admin_code": "4373034000", "name": "충청북도 단양군 어상천면",
+         "population": 1600, "forest_ratio": 0.81, "composite_score": 0.81}
+      ],
+      "n_in": 466, "n_out": 8
+    },
+    "recommend_forest_products": {
+      "recommendations": [
+        {"product": {"code": "P_007", "name_ko": "산양삼", "category": "약초", "cycle_years": 5},
+         "score": 0.89, "confidence_interval": [0.83, 0.92],
+         "expected_yield_kg_per_ha": 120, "standard_initial_cost_won": 4500000,
+         "typical_5yr_revenue": {"p10": 18000000, "p50": 45000000, "p90": 90000000}}
+      ],
+      "baseline_ablation": {"dadream_r2": 0.61, "ours_v3_r2": 0.67, "delta_vs_baseline": 0.06}
+    },
+    "simulate_5year_income": {
+      "village_admin_code": "4313034000", "product_code": "P_007",
+      "capital_bracket": "2천만", "area_bracket": "0.15ha",
+      "cumulative_5y_p10_won": 12000000,
+      "cumulative_5y_p50_won": 45000000,
+      "cumulative_5y_p90_won": 90000000,
+      "nong_eo_chon_median_p50_won": 38000000,
+      "calibration_error_pct": 11.2
+    },
+    "assess_shimter_eligibility": {
+      "is_eligible": false,
+      "rule_violations": ["rule_sanji_area_400sqm_plus"],
+      "next_step_guidance": "0.15ha 면적이 산촌체류형 쉼터 400㎡ 미달. 인근 농가 임차 대안 제시"
+    },
+    "match_subsidies_timeline": {
+      "matched_subsidies": [
+        {"code": "SUB_HUGYEJA", "name": "임업후계자 4월 1기 (40시간 비대면)"},
+        {"code": "SUB_CHJ_YOUNG", "name": "충주시 청년 정착지원금", "amount_won": 8000000},
+        {"code": "SUB_PESE_INTERN", "name": "산림형 예비사회적 기업 인턴십"}
+      ],
+      "this_week_top_action": {
+        "year": 1, "quarter": "Q2",
+        "title": "산림형 예비사회적 기업 인턴십 문의 + 임업후계자 신청",
+        "is_this_week_action": true
+      }
+    },
+    "find_mentors_and_cooperatives": {
+      "nearest_cooperative": {"id": "cooperative_4313", "name": "충주산림조합", "phone": "043-841-XXXX"},
+      "this_week_action": "산림형 예비사회적 기업 인턴십 문의 (kofpi.or.kr) + 4월 1기 양성과정 신청"
+    }
+  },
+  "final_summary": "충주 살미면 + 산양삼이 학습 경로에 fit합니다. 5년 P50 +4,500만. 산림조합 인턴십과 4월 양성과정으로 학습 경로 우선. 이번 주 1번 액션은 산림형 예비사회적 기업 인턴십 문의입니다."
+}

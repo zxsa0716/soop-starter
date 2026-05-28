@@ -1,0 +1,34 @@
+{
+  "version": "v1-2026-05",
+  "source": "산림소득지원사업 표준품셈 2021 (산림청 PDF)",
+  "items": {
+    "shimter": {
+      "foundation_won": 2500000,
+      "main_structure_wood_33sqm_won": 28000000,
+      "deck_20sqm_won": 4000000,
+      "septic_tank_won": 2500000,
+      "driveway_won": 3500000,
+      "permit_fee_won": 1000000,
+      "range_pct": 15
+    },
+    "pyogo_inoculation": {
+      "log_unit_cost_per_log_won": 8500,
+      "inoculation_labor_won_per_log": 1200,
+      "logs_per_ha": 1200,
+      "tarp_shade_per_ha_won": 1500000,
+      "watering_system_per_ha_won": 800000
+    },
+    "sanyang_sam": {
+      "seed_per_pyeong_won": 12000,
+      "soil_prep_per_pyeong_won": 8000,
+      "shade_net_per_pyeong_won": 6000,
+      "annual_op_per_pyeong_won": 3000
+    },
+    "general": {
+      "land_clearing_per_ha_won": 3500000,
+      "soil_amendment_per_ha_won": 1800000,
+      "fence_per_100m_won": 850000,
+      "tool_set_won": 1500000
+    }
+  }
+}

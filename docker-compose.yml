@@ -1,0 +1,199 @@
+# =============================================================================
+# Soop Starter — 7 컨테이너 단일 GPU VM 셋업
+# Postgres+PostGIS · Redis · Chroma · MinIO · Airflow · FastAPI · Next.js
+# =============================================================================
+# Quickstart:
+#   cp .env.example .env  # API 키 채우기
+#   docker compose up -d
+#   docker compose ps     # 7 컨테이너 health 확인
+#   open http://localhost:3000  (frontend)
+#   open http://localhost:8000/docs (FastAPI Swagger)
+#   open http://localhost:8080  (Airflow web)
+#   open http://localhost:9001  (MinIO console)
+# =============================================================================
+
+version: "3.9"
+
+x-airflow-common: &airflow-common
+  image: apache/airflow:2.9.2-python3.11
+  env_file: .env
+  environment:
+    AIRFLOW__CORE__EXECUTOR: LocalExecutor
+    AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: ${AIRFLOW__DATABASE__SQL_ALCHEMY_CONN}
+    AIRFLOW__CORE__LOAD_EXAMPLES: "False"
+    AIRFLOW__WEBSERVER__SECRET_KEY: ${AIRFLOW__WEBSERVER__SECRET_KEY}
+    _PIP_ADDITIONAL_REQUIREMENTS: >-
+      duckdb==1.0.0 lightgbm==4.3.0 prophet==1.1.5 pandas==2.2.2
+      geopandas==0.14.4 shapely==2.0.3 psycopg2-binary==2.9.9
+      anthropic==0.34.0 chromadb-client==0.5.3 sentence-transformers==2.7.0
+      earthengine-api==0.1.408 minio==7.2.7 redis==5.0.4 httpx==0.27.0
+      beautifulsoup4==4.12.3 lxml==5.2.2 pypdf==4.2.0 fastapi==0.111.0
+      networkx==3.3 PyYAML==6.0.1
+  volumes:
+    - ./dags:/opt/airflow/dags
+    - ./ml:/opt/airflow/ml
+    - ./backend/src:/opt/airflow/backend_src
+    - ./data:/opt/airflow/data
+    - airflow_logs:/opt/airflow/logs
+    - airflow_plugins:/opt/airflow/plugins
+  user: "${AIRFLOW_UID:-50000}:0"
+  depends_on:
+    postgres:
+      condition: service_healthy
+    redis:
+      condition: service_healthy
+
+services:
+  # --- L2 PostgreSQL + PostGIS (공간 데이터 + Airflow 메타) ---
+  postgres:
+    image: postgis/postgis:16-3.4
+    container_name: soop_postgres
+    env_file: .env
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_MULTIPLE_DATABASES: airflow
+    ports: ["5432:5432"]
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./scripts/init_postgres.sh:/docker-entrypoint-initdb.d/init.sh:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER}"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  # --- L2 Redis (실시간 캐시 7일 TTL · Airflow Celery / WebSocket pubsub) ---
+  redis:
+    image: redis:7.2-alpine
+    container_name: soop_redis
+    command: redis-server --maxmemory 1gb --maxmemory-policy allkeys-lru
+    ports: ["6379:6379"]
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 5
+
+  # --- L2 MinIO (raw SHP/PDF/위성 · S3 호환) ---
+  minio:
+    image: minio/minio:RELEASE.2024-06-13T22-53-53Z
+    container_name: soop_minio
+    command: server /data --console-address ":9001"
+    env_file: .env
+    environment:
+      MINIO_ROOT_USER: ${MINIO_ACCESS_KEY}
+      MINIO_ROOT_PASSWORD: ${MINIO_SECRET_KEY}
+    ports: ["9000:9000", "9001:9001"]
+    volumes:
+      - minio_data:/data
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:9000/minio/health/live"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # --- L3 Chroma (벡터 DB · RAG 임베딩) ---
+  chroma:
+    image: chromadb/chroma:0.5.3
+    container_name: soop_chroma
+    ports: ["8001:8000"]
+    volumes:
+      - chroma_data:/chroma/chroma
+    environment:
+      IS_PERSISTENT: "TRUE"
+      ANONYMIZED_TELEMETRY: "FALSE"
+
+  # --- L1 Airflow (6 DAG 오케스트레이션) ---
+  airflow-init:
+    <<: *airflow-common
+    container_name: soop_airflow_init
+    entrypoint: /bin/bash
+    command:
+      - -c
+      - |
+        airflow db migrate &&
+        airflow users create --role Admin --username admin --password admin \
+          --firstname Heedo --lastname Soop --email zxsa0716@kookmin.ac.kr || true
+
+  airflow-webserver:
+    <<: *airflow-common
+    container_name: soop_airflow_web
+    command: webserver
+    ports: ["8080:8080"]
+    depends_on:
+      airflow-init:
+        condition: service_completed_successfully
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8080/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+
+  airflow-scheduler:
+    <<: *airflow-common
+    container_name: soop_airflow_scheduler
+    command: scheduler
+    depends_on:
+      airflow-init:
+        condition: service_completed_successfully
+    healthcheck:
+      test: ["CMD-SHELL", 'airflow jobs check --job-type SchedulerJob --hostname "$${HOSTNAME}"']
+      interval: 30s
+      timeout: 10s
+      retries: 5
+
+  # --- L5+L6 FastAPI Backend (Claude Opus 4.7 + 11 모듈) ---
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: soop_backend
+    env_file: .env
+    ports: ["8000:8000"]
+    volumes:
+      - ./backend/src:/app/src
+      - ./data:/app/data
+      - ./ml:/app/ml
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+      chroma:
+        condition: service_started
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 15s
+      timeout: 5s
+      retries: 5
+    command: uvicorn src.api.main:app --host 0.0.0.0 --port 8000 --reload
+
+  # --- L7 Next.js Frontend ---
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: soop_frontend
+    env_file: .env
+    environment:
+      NEXT_PUBLIC_API_URL: http://localhost:8000
+    ports: ["3000:3000"]
+    volumes:
+      - ./frontend/src:/app/src
+    depends_on:
+      backend:
+        condition: service_started
+    command: npm run dev
+
+volumes:
+  postgres_data:
+  minio_data:
+  chroma_data:
+  airflow_logs:
+  airflow_plugins:
+
+networks:
+  default:
+    name: soop_net

@@ -1,0 +1,132 @@
+# Secrets
+.env
+.env.local
+.env.*.local
+*.key
+*.pem
+secrets.json
+gee-service-account.json
+.gee_credentials
+
+# Refs (저작권 문서 절대 commit 금지)
+refs/
+refs_text/
+참고/
+
+# 원본 대용량 데이터
+data/raw/
+data/interim/
+data/api_cache/
+data/processed/corpus_reference/
+data/processed/lgbm_m03_v3.pkl
+data/processed/income_grid.duckdb
+data/processed/income_grid.duckdb.wal
+data/processed/income_grid_466.duckdb
+data/processed/income_grid_466.duckdb.wal
+
+# 모델 binary
+*.pkl
+*.joblib
+*.pt
+*.pth
+*.onnx
+*.safetensors
+*.parquet
+*.npy
+*.gpkg
+*.gpkg-journal
+*.shp
+*.shx
+*.dbf
+*.prj
+*.cpg
+*.tif
+*.tiff
+*.nc
+*.duckdb
+*.duckdb.wal
+
+# 작업 기록 (개인 정보)
+HONEST_STATUS_v3.md
+HONEST_STATUS.md
+SYSTEM_VERIFICATION_REPORT.md
+V3_FINAL_REPORT.md
+LLM_VERIFICATION_REPORT.md
+STATUS.md
+YOU_HAVE_NOW.md
+YOU_MUST_PROVIDE.md
+
+# 임시 실행 파일
+RENAME_REFS.bat
+RENAME_REFS.ps1
+RENAME_REF_FILES.bat
+RENAME_REF_FILES.ps1
+EXTRACT_REFS.bat
+FIX_04_05.bat
+extract_refs.py
+fix_04_05.py
+rename_refs.py
+
+# Streamlit 번들 데이터
+streamlit_app/data/
+
+# 빌드 산출물
+*.pptx
+*.docx
+*.pdf
+*.zip
+*.xlsx
+*.hwp
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+.venv/
+venv/
+ENV/
+env/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+
+# Node
+node_modules/
+package-lock.json
+*.log
+
+# IDE / OS
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# Streamlit secrets
+.streamlit/secrets.toml
+.streamlit/credentials.toml
+
+# Docker / Airflow
+volumes/
+.docker/
+airflow.cfg
+airflow.db
+dags/__pycache__/
+
+# 이모지 파일명 (Windows에서 깨짐)
+START_DEMO.bat
+🚀*
+
+# 기타
+logs/
+tmp/
+temp/
+.cache/
+.ipynb_checkpoints/

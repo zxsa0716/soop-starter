@@ -1,0 +1,254 @@
+version: v1-2026-05
+sources:
+  - 산림청 사업시행지침서 (PDF, RAG corpus)
+  - 임업-in 통합포털 (foco.go.kr / pay.foco.go.kr)
+  - 법제처 OpenAPI 5법령
+  - 시군 홈페이지 정착지원금 (주 1회 크롤)
+  - 산림조합 임업정책자금
+last_updated: "2026-05"
+
+subsidies:
+  # ===== A. 임업후계자 3 경로 =====
+  - code: SUB_HUGYEJA_SENIOR
+    name: 임업후계자 양성 (시니어공유경제연구원 비대면)
+    agency: 산림청
+    amount_won: 0
+    eligibility_age_min: 18
+    eligibility_age_max: 55
+    eligibility_requires_40h_training: true
+    apply_url: https://fhi.forest.go.kr
+    cite_law: "임업 및 산촌 진흥촉진에 관한 법률 §3"
+    timeline_year: 1
+    timeline_quarter: Q2
+
+  - code: SUB_HUGYEJA_FHI
+    name: 임업후계자 양성 (산림교육원 대면 5일)
+    agency: 산림교육원
+    amount_won: 0
+    eligibility_age_min: 18
+    eligibility_requires_40h_training: true
+    cite_law: "임업 및 산촌 진흥촉진에 관한 법률 §3"
+    timeline_year: 1
+
+  - code: SUB_HUGYEJA_REGIONAL
+    name: 시도 단위 임업후계자 양성
+    agency: 광역지자체 산림과
+    amount_won: 0
+    eligibility_age_min: 18
+    timeline_year: 1
+
+  # ===== B. 임업경영체 등록 =====
+  - code: SUB_BUSINESS_REG
+    name: 임업경영체 등록
+    agency: 산림청
+    amount_won: 0
+    eligibility_requires_business_registration: true
+    apply_url: https://foco.go.kr
+    cite_law: "임업·산림 공익직접지불제 운영에 관한 법률 §6"
+    timeline_year: 1
+
+  # ===== C. 임업직불금 =====
+  - code: SUB_DIRECT_PAY
+    name: 임업직불금
+    agency: 산림청
+    amount_won: 20000000
+    amount_formula: "기본 130만원 + ha당 60만원 (한도 ha당 90만원, 5ha 상한)"
+    eligibility_area_ha_min: 0.1
+    apply_url: https://pay.foco.go.kr
+    cite_law: "임업·산림 공익직접지불제 운영에 관한 법률 §4"
+    timeline_year: 5
+
+  # ===== D. 2026 NEW =====
+  - code: SUB_MIRAE_CENTER
+    name: 산림 미래혁신센터 90억 (2026 NEW)
+    agency: 산림청
+    is_2026_new: true
+    amount_won: 9000000000
+    eligibility_age_min: 18
+    eligibility_age_max: 40
+    timeline_year: 1
+
+  - code: SUB_SHIMTER_SHELTER
+    name: 산촌체류형 쉼터 (2026 NEW)
+    agency: 산림청
+    is_2026_new: true
+    amount_won: 0
+    eligibility_area_ha_min: 0.04
+    cite_law: "산지관리법 시행령 별표 일부개정안"
+    timeline_year: 1
+
+  - code: SUB_YEONGYANG_SMARTFARM
+    name: 영양 임산물 스마트팜 105억 (2026~2028 NEW)
+    agency: 산림청 / 경상북도 / 영양군
+    is_2026_new: true
+    amount_won: 10500000000
+    eligibility_age_min: 18
+    eligibility_age_max: 40
+    eligibility_region:
+      - 경상북도
+    timeline_year: 1
+
+  # ===== E. 임업정책자금 (산림조합) =====
+  - code: SUB_LOAN_SUP_FILLMENT
+    name: 임업정책자금 — 숲가꾸기
+    agency: 산림조합
+    amount_formula: "이자 1.0% / 거치 5년 + 상환 30년"
+    cite_law: "산림자원의 조성 및 관리에 관한 법률 §15"
+    timeline_year: 1
+
+  - code: SUB_LOAN_GUSANCHON
+    name: 임업정책자금 — 귀산촌 정착
+    agency: 산림조합
+    amount_won: 200000000
+    amount_formula: "이자 2.0% / 거치 3년 + 상환 7년"
+    eligibility_age_max: 60
+    timeline_year: 1
+
+  - code: SUB_LOAN_SHORT_TERM_INCOME
+    name: 임업정책자금 — 단기소득자금
+    agency: 산림조합
+    amount_won: 50000000
+    amount_formula: "이자 2.0% / 거치 5년 + 상환 5년"
+    timeline_year: 1
+
+  - code: SUB_LOAN_FOREST_BUSINESS
+    name: 임업정책자금 — 임업경영체 운영자금
+    agency: 산림조합
+    amount_won: 300000000
+    timeline_year: 2
+
+  # ===== F. 시군 정착지원금 =====
+  - code: SUB_SG_PYEONGCHANG
+    name: 평창군 청년 정착지원금
+    agency: 평창군
+    amount_won: 15000000
+    eligibility_age_min: 19
+    eligibility_age_max: 39
+    eligibility_region:
+      - 강원특별자치도/평창군
+    timeline_year: 1
+
+  - code: SUB_SG_CHUNGJU
+    name: 충주시 청년 정착지원금
+    agency: 충주시
+    amount_won: 8000000
+    eligibility_age_min: 19
+    eligibility_age_max: 39
+    eligibility_region:
+      - 충청북도/충주시
+    timeline_year: 1
+
+  - code: SUB_SG_JINAN
+    name: 진안군 귀산촌 정착 지원
+    agency: 진안군
+    amount_won: 12000000
+    eligibility_region:
+      - 전북특별자치도/진안군
+    timeline_year: 1
+
+  - code: SUB_SG_YEONGYANG_YOUNG
+    name: 영양군 청년 귀산촌 지원금
+    agency: 영양군
+    amount_won: 10000000
+    eligibility_age_max: 39
+    eligibility_region:
+      - 경상북도/영양군
+    timeline_year: 1
+
+  # ===== G. KOC =====
+  - code: SUB_KOC_REGISTER
+    name: 산림탄소상쇄 KOC 등록
+    agency: 산림탄소센터 (042-603-7315)
+    amount_won: 0
+    amount_formula: "KAU 단가의 약 80%, 약 10000원/tCO2"
+    eligibility_area_ha_min: 1.0
+    cite_law: "탄소흡수원의 유지 및 증진에 관한 법률 §3"
+    timeline_year: 2
+
+  # ===== H. 인턴십·멘토십 =====
+  - code: SUB_PESE_INTERN
+    name: 산림형 예비사회적 기업 인턴십
+    agency: 한국임업진흥원
+    amount_won: 12000000
+    eligibility_age_max: 39
+    timeline_year: 1
+
+  - code: SUB_MENTOR_FOREST_BIZ
+    name: 산림사업법인 기술교육 + 멘토십
+    agency: 한국임업진흥원
+    amount_won: 0
+    timeline_year: 1
+
+  - code: SUB_COOPERATIVE_INTERN
+    name: 산림조합 6개월 인턴십
+    agency: 시군 산림조합
+    amount_won: 12000000
+    eligibility_age_max: 39
+    timeline_year: 1
+
+  # ===== I. 다드림 BYOA =====
+  - code: SUB_DADREAM_REGISTER
+    name: 다드림 가입 + 임야 PNU 등록 (BYOA)
+    agency: 한국임업진흥원
+    amount_won: 0
+    apply_url: https://gis.kofpi.or.kr/dad_user/
+    timeline_year: 2
+
+  # ===== J. 양봉·임업기계 =====
+  - code: SUB_APICULTURE
+    name: 양봉 산림복합경영
+    agency: 산림청
+    amount_won: 5000000
+    timeline_year: 3
+
+  - code: SUB_FOREST_MACHINERY
+    name: 임업기계장비 지원
+    agency: 시군
+    amount_formula: "총 사업비 50~70% 보조"
+    timeline_year: 3
+
+  # ===== K. 임산물 가공·유통 =====
+  - code: SUB_PROCESSING
+    name: 임산물 가공 시설 지원
+    agency: 산림청
+    amount_won: 100000000
+    amount_formula: "총 사업비 50% 한도"
+    timeline_year: 4
+
+  - code: SUB_DISTRIBUTION
+    name: 임산물 유통 지원
+    agency: 산림청 / 한국임업진흥원
+    timeline_year: 4
+
+  - code: SUB_TRACK_INNOV
+    name: 산림 미래혁신센터 후속 청년 우수사례 선정
+    agency: 산림청
+    is_2026_new: true
+    amount_won: 30000000
+    timeline_year: 3
+
+  # ===== L. 산림복지·치유·인증 =====
+  - code: SUB_HEALING_SERVICE
+    name: 산림복지서비스 제공자 등록
+    agency: 한국산림복지진흥원
+    amount_won: 0
+    timeline_year: 3
+
+  - code: SUB_FARM_SETTLE
+    name: 영농정착지원사업 (월 100만 × 3년)
+    agency: 농림축산식품부
+    amount_won: 36000000
+    eligibility_age_max: 39
+    timeline_year: 1
+
+  - code: SUB_ECO_CERT
+    name: 친환경 임산물 인증
+    agency: 국립농산물품질관리원
+    amount_won: 5000000
+    timeline_year: 2
+
+  - code: SUB_FARMER_INSURANCE
+    name: 임업인 안전공제
+    agency: 산림조합 / NH농협
+    amount_formula: "보험료 50% 정부 지원"
+    timeline_year: 2

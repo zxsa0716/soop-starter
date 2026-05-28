@@ -1,0 +1,222 @@
+# =============================================================================
+# ForKG-Korea Ontology v1.0
+# =============================================================================
+# ForPKG-1.0 framework (Sun & Luo, NEFU 2024.11, arXiv:2411.11090)의
+# 한국 산림 정책 first application.
+#
+# 9 entity classes × 11 relation classes.
+# Target scale: ≈ 300 nodes + 700 edges (W3-T2 추출 목표).
+# Storage: NetworkX in-memory + JSON 직렬화 (Neo4j 격하).
+# =============================================================================
+
+meta:
+  name: ForKG-Korea
+  version: "1.0.0"
+  created: "2026-05"
+  authors: ["Heedo (Soop Starter Project)"]
+  upstream_framework: "ForPKG-1.0"
+  upstream_citation: "Sun, J., & Luo, Z. (2024). arXiv:2411.11090"
+  language: ko
+  license: "MIT (code) · 공공누리 4유형 (data)"
+
+# -----------------------------------------------------------------------------
+# Entity classes (9)
+# -----------------------------------------------------------------------------
+entities:
+  Location:
+    description: "행정구역 (시도·시군·읍면동·산촌) 및 임야 필지(PNU 19자리)"
+    fields:
+      - {name: name,       type: string,  required: true,  example: "강원특별자치도 평창군 진부면"}
+      - {name: admin_code, type: string,  required: true,  example: "4276034000"}
+      - {name: level,      type: enum,    required: true,  values: [sido, sigungu, eupmyeondong, sanchon, pnu]}
+      - {name: pnu,        type: string,  required: false, example: "4276034021100010000"}
+      - {name: lat,        type: float,   required: false}
+      - {name: lon,        type: float,   required: false}
+      - {name: is_sanchon, type: boolean, required: false, comment: "산림기본법 §3 분류 466 산촌"}
+
+  ForestProduct:
+    description: "단기임산물 (52 품목) + 가공품"
+    fields:
+      - {name: name_ko,     type: string,  required: true,  example: "표고"}
+      - {name: name_sci,    type: string,  required: false, example: "Lentinula edodes"}
+      - {name: category,    type: enum,    required: true,  values: [mushroom, herb, nut, fruit, sap, bark, leaf, root]}
+      - {name: cycle_years, type: int,     required: true,  example: 5}
+      - {name: is_short_term, type: boolean, default: true, comment: "단기임산물 = 5년 이내 첫 수확"}
+
+  Policy:
+    description: "산림 정책 · 사업 · 제도"
+    fields:
+      - {name: name,         type: string,  required: true,  example: "산림 미래혁신센터"}
+      - {name: agency,       type: string,  required: true,  example: "산림청"}
+      - {name: budget_eok,   type: float,   required: false, example: 90.0}
+      - {name: launch_year,  type: int,     required: true,  example: 2026}
+      - {name: status,       type: enum,    values: [planned, launched, sunset]}
+      - {name: target_group, type: string,  example: "청년 임업인 18~40세"}
+
+  Subsidy:
+    description: "보조사업 (~30종, 시군 정착지원 포함)"
+    fields:
+      - {name: name,              type: string,  required: true,  example: "임업직불금"}
+      - {name: parent_policy,     type: string,  required: false}
+      - {name: amount_won,        type: int,     required: false, example: 20000000}
+      - {name: amount_formula,    type: string,  required: false, example: "ha당 60만원, 한도 2,000만원"}
+      - {name: eligibility_age,   type: string,  required: false, example: "18~40세"}
+      - {name: eligibility_area_ha, type: string, required: false, example: ">= 1.0"}
+      - {name: eligibility_region, type: string, required: false}
+      - {name: apply_period,      type: string,  required: false, example: "매년 3~5월"}
+      - {name: cite_law,          type: string,  required: false, example: "임업산림 공익직접지불제 운영법 §4"}
+
+  Organization:
+    description: "산림조합 · 임업진흥원 · 산림사업법인 · 정부기관"
+    fields:
+      - {name: name,        type: string,  required: true}
+      - {name: type,        type: enum,    values: [cooperative, agency, company, social_enterprise, education]}
+      - {name: sigungu,     type: string,  required: false}
+      - {name: contact,     type: string,  required: false, example: "033-332-XXXX"}
+      - {name: specialties, type: array<string>, comment: "기술능력 · 전문 임산물"}
+
+  Person:
+    description: "멘토 · 임업인 (개인정보 보호, 공개 사례만)"
+    fields:
+      - {name: name,        type: string,  comment: "이니셜만 저장 (예: 박OO)"}
+      - {name: role,        type: enum,    values: [mentor, expert, official, farmer]}
+      - {name: location,    type: string}
+      - {name: specialty,   type: string,  example: "표고"}
+
+  Procedure:
+    description: "행정 절차 (산지전용·임업후계자 등록 등)"
+    fields:
+      - {name: name,         type: string,  required: true,  example: "산지전용 신고"}
+      - {name: system,       type: string,  example: "산지전용통합정보시스템 1644-0672"}
+      - {name: steps,        type: array<string>}
+      - {name: cite_law,     type: string,  required: true,  example: "산지관리법 §14"}
+
+  LegalProvision:
+    description: "법령·시행령·시행규칙·별표 청크 단위"
+    fields:
+      - {name: law_id,      type: string,  required: true,  example: "234829"}
+      - {name: law_name,    type: string,  required: true,  example: "산지관리법"}
+      - {name: article,     type: string,  required: true,  example: "제14조"}
+      - {name: paragraph,   type: string,  required: false, example: "제1항 제2호"}
+      - {name: text,        type: text,    required: true}
+      - {name: page,        type: int,     required: false}
+      - {name: amended_date, type: date,   required: false}
+      - {name: source_url,  type: url,     required: true,  comment: "법제처 OpenAPI link"}
+
+  DataSource:
+    description: "공공데이터 카탈로그 (60 소스 자체)"
+    fields:
+      - {name: name,        type: string,  required: true,  example: "임업정보 다드림"}
+      - {name: agency,      type: string,  required: true}
+      - {name: url,         type: url}
+      - {name: dataset_id,  type: string,  example: "15110279"}
+      - {name: api_method,  type: enum,    values: [OpenAPI, BulkDownload, Crawl, BYOA]}
+      - {name: license,     type: string,  example: "공공누리 4유형"}
+
+# -----------------------------------------------------------------------------
+# Relation classes (11) — directed edges
+# -----------------------------------------------------------------------------
+relations:
+  SUITABLE_FOR:
+    description: "임산물이 마을·지역에 적합 (다드림 52품목 재배적지)"
+    domain: Location
+    range: ForestProduct
+    properties:
+      - {name: score,           type: float, range: [0, 1]}
+      - {name: confidence,      type: float, range: [0, 1]}
+      - {name: data_source,     type: string, example: "다드림"}
+      - {name: shap_top3,       type: array<string>}
+
+  GOVERNED_BY:
+    description: "정책·절차가 법령에 근거"
+    domain: [Policy, Subsidy, Procedure]
+    range: LegalProvision
+
+  PROVIDES:
+    description: "기관이 정책·보조사업을 운영"
+    domain: Organization
+    range: [Policy, Subsidy]
+
+  LOCATED_IN:
+    description: "조직·필지가 행정구역 내 위치"
+    domain: [Organization, Person, Location]
+    range: Location
+
+  ELIGIBLE_FOR:
+    description: "사용자 프로파일이 보조사업 자격에 부합"
+    domain: Person  # or UserProfile (런타임 binding)
+    range: Subsidy
+    properties:
+      - {name: rule_satisfied,  type: array<string>}
+      - {name: rule_violated,   type: array<string>}
+
+  SPECIALIZES_IN:
+    description: "멘토·산림사업법인이 특정 임산물 전문"
+    domain: [Person, Organization]
+    range: ForestProduct
+    properties:
+      - {name: years_experience, type: int}
+
+  REQUIRES:
+    description: "정책이 절차·자격을 요구"
+    domain: [Policy, Subsidy]
+    range: [Procedure, LegalProvision]
+
+  AMENDED_BY:
+    description: "법령 조항이 개정"
+    domain: LegalProvision
+    range: LegalProvision
+    properties:
+      - {name: amendment_date, type: date}
+
+  APPLIES_TO:
+    description: "정책·보조사업의 적용 대상 그룹"
+    domain: [Policy, Subsidy]
+    range: [Person, Location, ForestProduct]
+
+  SOURCED_FROM:
+    description: "엔티티의 원천 데이터셋"
+    domain: [Location, ForestProduct, Policy, Subsidy, Organization, LegalProvision]
+    range: DataSource
+
+  ADJACENT_TO:
+    description: "마을 5km 반경 인접 (M11 라이프스타일 score 계산용)"
+    domain: Location
+    range: Location
+    properties:
+      - {name: distance_km,    type: float}
+      - {name: poi_overlap,    type: int}
+
+# -----------------------------------------------------------------------------
+# Extraction prompt (Claude few-shot, M08 W3-T2)
+# -----------------------------------------------------------------------------
+extraction:
+  model: claude-opus-4-7
+  approach: schema-aligned few-shot
+  shot_count: 12
+  validation: jsonschema + cross-check 법령 인용 강제
+  fallback: human review for confidence < 0.7
+
+# -----------------------------------------------------------------------------
+# Target sizes (W3-T2 산출 기준)
+# -----------------------------------------------------------------------------
+target_sizes:
+  Location: ~120         # 466 산촌 중 시연 페르소나 거점 + 시군 142
+  ForestProduct: 52
+  Policy: ~25            # 산림 미래혁신센터·쉼터·스마트팜·임업직불금 등
+  Subsidy: ~30           # 정책별 ~1.2개 (룰 엔진 매칭)
+  Organization: ~50      # 산림조합 142 중 시연 거점 + 임업진흥원 등
+  Person: ~20            # 익명화 멘토 사례
+  Procedure: ~15         # 산지전용·임업후계자 등록 등
+  LegalProvision: ~80    # 5법령 주요 조항
+  DataSource: 60         # data inventory 그대로
+  total_nodes: ~452 (목표 ≥ 250, 실측 약 300)
+  total_edges: ~700
+
+# -----------------------------------------------------------------------------
+# Validation
+# -----------------------------------------------------------------------------
+validation:
+  ontology_review: ["김재현 위원", "외부 도메인 검토"]
+  schema_check: backend/src/modules/m08_forkg/validate.py
+  visual_check:  scripts/forkg_visualize.py (NetworkX → pyvis HTML)

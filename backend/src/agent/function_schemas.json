@@ -1,0 +1,152 @@
+{
+  "schemas_version": "1.0.0",
+  "framework": "Anthropic Claude function calling (tools)",
+  "model": "claude-opus-4-7",
+  "notes": "11 모듈 JSON schema. Claude가 사용자 의도에 따라 자동 호출. backend/src/agent/orchestrator.py가 dispatch.",
+  "tools": [
+    {
+      "name": "extract_user_profile",
+      "description": "M01. 사용자 자연어 한 단락 또는 form 입력에서 27개 결정 변수를 구조화 추출. 3턴 max + hybrid form. 박지영 위원 강제: 5~10턴이면 사용자 이탈.",
+      "input_schema": {
+        "type": "object",
+        "required": ["raw_text"],
+        "properties": {
+          "raw_text": {"type": "string", "description": "사용자 자연어 단락"},
+          "previous_turns": {"type": "array", "items": {"type": "object"}, "default": []},
+          "form_overrides": {"type": "object", "description": "사용자가 슬라이더로 수정한 필드", "default": {}}
+        }
+      }
+    },
+    {
+      "name": "filter_candidate_villages",
+      "description": "M02. 466 산촌 읍면을 사용자 적합 5~30개로 좁힘. 공간·라이프스타일·안전 3축.",
+      "input_schema": {
+        "type": "object",
+        "required": ["user_profile"],
+        "properties": {
+          "user_profile": {"type": "object", "description": "UserProfile 27 fields"},
+          "top_k": {"type": "integer", "default": 30, "minimum": 5, "maximum": 50}
+        }
+      }
+    },
+    {
+      "name": "recommend_forest_products",
+      "description": "M03. LightGBM 28d feature로 52 단기임산물 중 Top-5 추천. 다드림 baseline ablation 동시 반환. SHAP 자동 해설.",
+      "input_schema": {
+        "type": "object",
+        "required": ["user_profile", "candidate_villages"],
+        "properties": {
+          "user_profile": {"type": "object"},
+          "candidate_villages": {"type": "array", "items": {"type": "object"}},
+          "top_k": {"type": "integer", "default": 5, "minimum": 1, "maximum": 10},
+          "include_dadream_baseline": {"type": "boolean", "default": true}
+        }
+      }
+    },
+    {
+      "name": "find_similar_villages",
+      "description": "M04. 사용자 선호 마을 → 유사 마을 Top-K. KNN baseline (production) + GAT contrastive (ablation, 산림조합 142 권역 supervisor).",
+      "input_schema": {
+        "type": "object",
+        "required": ["seed_village_codes"],
+        "properties": {
+          "seed_village_codes": {"type": "array", "items": {"type": "string"}, "maxItems": 3},
+          "top_k": {"type": "integer", "default": 5},
+          "use_gat_ablation": {"type": "boolean", "default": false}
+        }
+      }
+    },
+    {
+      "name": "simulate_5year_income",
+      "description": "M05. 마을×임산물×자본×면적 → 5년 P10/P50/P90 fan chart. 93,000 시나리오 DuckDB 사전 grid에서 1초 lookup. Prophet+LGBM + Bootstrap MC + 임가경제 1,500가구 calibrated.",
+      "input_schema": {
+        "type": "object",
+        "required": ["village_code", "product_code", "capital_won", "area_ha"],
+        "properties": {
+          "village_code": {"type": "string"},
+          "product_code": {"type": "string"},
+          "capital_won": {"type": "integer", "minimum": 0},
+          "area_ha": {"type": "number", "minimum": 0.05, "maximum": 100},
+          "include_compared_to_nong_eo_chon_median": {"type": "boolean", "default": true}
+        }
+      }
+    },
+    {
+      "name": "match_subsidies_timeline",
+      "description": "M06. 사용자 자격 → 매칭 ~30 보조사업 + 5년 timeline 출력. 룰 엔진 1단계 + RAG 2단계. list 아닌 timeline (김재현 위원 요구).",
+      "input_schema": {
+        "type": "object",
+        "required": ["user_profile"],
+        "properties": {
+          "user_profile": {"type": "object"},
+          "target_village_code": {"type": ["string", "null"]},
+          "target_product_codes": {"type": "array", "items": {"type": "string"}, "default": []}
+        }
+      }
+    },
+    {
+      "name": "assess_shimter_eligibility",
+      "description": "M07. 임야 매물 PNU → 산촌체류형 쉼터 7개 룰 검증 + 비용 시뮬 (표준품셈 6항목 ±15%). 산지전용통합정보시스템 1644-0672 안내.",
+      "input_schema": {
+        "type": "object",
+        "required": ["lot_pnu"],
+        "properties": {
+          "lot_pnu": {"type": "string", "minLength": 19, "maxLength": 19},
+          "design_options": {"type": "object", "description": "권장 설계 override", "default": {}}
+        }
+      }
+    },
+    {
+      "name": "answer_with_rag",
+      "description": "M08. ForKG-Korea + RAG 자유 정책 질문 답변. BGE-m3 + bge-reranker-v2 + BM25/vector RRF + 1~2 hop graph traversal. 청크 인용 강제, 미달 시 거절.",
+      "input_schema": {
+        "type": "object",
+        "required": ["question"],
+        "properties": {
+          "question": {"type": "string"},
+          "user_profile_context": {"type": ["object", "null"]},
+          "top_k_chunks": {"type": "integer", "default": 5},
+          "min_citation_count": {"type": "integer", "default": 1}
+        }
+      }
+    },
+    {
+      "name": "find_mentors_and_cooperatives",
+      "description": "M09. 사용자 위치·관심 임산물 → 인근 산림조합 + 산림사업법인 멘토 Top-3 + 직근 양성과정 + '이번 주 1번 액션'.",
+      "input_schema": {
+        "type": "object",
+        "required": ["sigungu_code"],
+        "properties": {
+          "sigungu_code": {"type": "string"},
+          "interested_product_codes": {"type": "array", "items": {"type": "string"}, "default": []},
+          "include_education_courses": {"type": "boolean", "default": true}
+        }
+      }
+    },
+    {
+      "name": "register_disaster_alert",
+      "description": "M10. 사용자 임야 PNU 5km 반경 산림재난(산불·산사태) 일일 push 등록. KoMIS 480 + 기상청 5km + microclimate downscaling. 백그라운드 동작.",
+      "input_schema": {
+        "type": "object",
+        "required": ["user_id", "lot_pnu", "channel"],
+        "properties": {
+          "user_id": {"type": "string"},
+          "lot_pnu": {"type": "string"},
+          "channel": {"type": "string", "enum": ["kakao", "email", "both"]}
+        }
+      }
+    },
+    {
+      "name": "score_lifestyle_axes",
+      "description": "M11. 마을 5km 반경 시설 (치유의숲·자연휴양림·봉우리·둘레길) → 4축 score 산출. M02와 병렬. 박지영 위원 강제 격상.",
+      "input_schema": {
+        "type": "object",
+        "required": ["village_code"],
+        "properties": {
+          "village_code": {"type": "string"},
+          "radius_km": {"type": "number", "default": 5.0, "minimum": 1, "maximum": 20}
+        }
+      }
+    }
+  ]
+}
