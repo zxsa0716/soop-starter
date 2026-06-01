@@ -1,0 +1,74 @@
+{
+  "trained_at": "2026-05-27T12:14:48.010574",
+  "graph": {
+    "n_nodes": 729,
+    "n_edges": 633,
+    "node_types": [
+      "LegalProvision",
+      "Subsidy",
+      "Procedure",
+      "Policy",
+      "ForestProduct",
+      "Organization",
+      "DataSource",
+      "Location"
+    ]
+  },
+  "method_config": {
+    "baseline": {
+      "dim": 11,
+      "encoding": "one-hot type + log-degree"
+    },
+    "spectral": {
+      "dim": 32,
+      "method": "Laplacian eigenmap"
+    },
+    "node2vec": {
+      "dim": 64,
+      "num_walks": 10,
+      "walk_len": 20,
+      "p": 1.0,
+      "q": 0.5,
+      "window": 10,
+      "negative": 8,
+      "epochs": 20,
+      "note": "Skip-gram negative sampling = InfoNCE family contrastive (Mikolov 2013)"
+    }
+  },
+  "results": {
+    "baseline_onehot": {
+      "name": "baseline_onehot",
+      "n_test": 63,
+      "p_at_1": 0.0,
+      "p_at_3": 0.0,
+      "p_at_5": 0.0,
+      "p_at_10": 0.0,
+      "mrr": 0.0025089331089000904
+    },
+    "spectral_laplacian": {
+      "name": "spectral_laplacian",
+      "n_test": 63,
+      "p_at_1": 0.031746031746031744,
+      "p_at_3": 0.09523809523809523,
+      "p_at_5": 0.1746031746031746,
+      "p_at_10": 0.7142857142857143,
+      "mrr": 0.16060132741063168
+    },
+    "node2vec_skipgram": {
+      "name": "node2vec_skipgram",
+      "n_test": 63,
+      "p_at_1": 0.31746031746031744,
+      "p_at_3": 0.6984126984126984,
+      "p_at_5": 0.8571428571428571,
+      "p_at_10": 1.0,
+      "mrr": 0.52324892920131
+    }
+  },
+  "ablation_summary": {
+    "p_at_5_baseline": 0.0,
+    "p_at_5_spectral": 0.1746031746031746,
+    "p_at_5_node2vec": 0.8571428571428571,
+    "n2v_vs_baseline_pct": Infinity,
+    "n2v_vs_spectral_pct": 390.90909090909093
+  }
+}

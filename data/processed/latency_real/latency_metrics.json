@@ -1,0 +1,89 @@
+{
+  "trained_at": "2026-05-27T17:09:34.811782",
+  "n_trials_per_persona": 30,
+  "n_personas": 4,
+  "per_module": {
+    "M01_extract_profile": {
+      "p50_ms": 50.14351799036376,
+      "p95_ms": 50.17337160388706,
+      "mean_ms": 50.14414720644709,
+      "n_trials": 120
+    },
+    "M02_filter_villages": {
+      "p50_ms": 0.08207549399230629,
+      "p95_ms": 0.1334407366812229,
+      "mean_ms": 0.09326296688717169,
+      "n_trials": 120
+    },
+    "M03_recommend_products": {
+      "p50_ms": 1.5413119981531054,
+      "p95_ms": 1.7882416839711368,
+      "mean_ms": 1.587623156956397,
+      "n_trials": 120
+    },
+    "M05_simulate_5y": {
+      "p50_ms": 0.5110640049679205,
+      "p95_ms": 0.577240546408575,
+      "mean_ms": 0.5168903502635658,
+      "n_trials": 120
+    },
+    "M06_subsidies": {
+      "p50_ms": 9.563890009303577,
+      "p95_ms": 10.65480709366966,
+      "mean_ms": 10.605570734090483,
+      "n_trials": 120
+    },
+    "M07_shimter": {
+      "p50_ms": 0.0014325050869956613,
+      "p95_ms": 0.0021069907234050325,
+      "mean_ms": 0.001523307340297227,
+      "n_trials": 120
+    },
+    "M08_RAG": {
+      "p50_ms": 60.301578501821496,
+      "p95_ms": 60.439029487315565,
+      "mean_ms": 60.32379122552811,
+      "n_trials": 120
+    },
+    "M09_mentors": {
+      "p50_ms": 0.004383997293189168,
+      "p95_ms": 0.00536199368070811,
+      "mean_ms": 0.004746157840903227,
+      "n_trials": 120
+    }
+  },
+  "totals_ms": {
+    "p50_no_llm": 122.14925450098235,
+    "p95_no_llm": 123.77360013633734,
+    "mean_no_llm": 123.27755510535401,
+    "estimated_llm_overhead_ms": 4000,
+    "est_p50_with_llm": 4122.149254500982,
+    "est_p95_with_llm": 5323.773600136337
+  },
+  "note": "M01 (Gemini extract) and M08 (Gemini RAG answer) were stubbed locally. Real Gemini 2.5-flash latency: ~1.8s for 27-field JSON extraction, ~2.2s for RAG answer.",
+  "llm_real_measurements": {
+    "measured_at": "2026-05-28T02:30:00",
+    "model": "gemini-2.5-flash",
+    "n_trials": 1,
+    "m01_p50_ms": 10100,
+    "m08_p50_ms": 9600,
+    "scenarios_ms": {
+      "serial_default": 20300,
+      "parallel_async": 10300,
+      "streaming_first_byte": 2000
+    },
+    "design_target_ms": 14000,
+    "verdict": {
+      "serial": "EXCEEDS (20.3s > 14s)",
+      "parallel": "PASS (10.3s < 14s)",
+      "streaming": "PASS (2.0s first byte)"
+    },
+    "honest_note": "초기 estimated_llm_overhead_ms=4000은 너무 낙관적. 실측은 직렬 20초, 병렬 10초.",
+    "improvement_plan": [
+      "1. asyncio.gather로 M01||M08 병렬 호출 (직렬 20s → 병렬 10s)",
+      "2. Gemini streaming response (사용자 체감 2s)",
+      "3. Vertex AI 마이그레이션 (rate limit 해소)",
+      "4. Gemini 2.5-flash-lite 평가"
+    ]
+  }
+}

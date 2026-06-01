@@ -1,0 +1,2866 @@
+{
+  "version": "v3-shp-joined-from-PDF-02",
+  "source_pdf": "refs/02_sanchon_466_2024.pdf",
+  "source_shp": "D:/craft/CRAFT/data/행정경계/읍면동SHP",
+  "total_matched": 467,
+  "total_unmatched": 5,
+  "villages": [
+    {
+      "sido": "부산광역시",
+      "eupmyeon": "철마면",
+      "BJCD": "2671033000",
+      "sigungu_code": "26710"
+    },
+    {
+      "sido": "대구광역시",
+      "eupmyeon": "가창면",
+      "BJCD": "2771031000",
+      "sigungu_code": "27710"
+    },
+    {
+      "sido": "대구광역시",
+      "eupmyeon": "효령면",
+      "BJCD": "2772032000",
+      "sigungu_code": "27720"
+    },
+    {
+      "sido": "대구광역시",
+      "eupmyeon": "부계면",
+      "BJCD": "2772033000",
+      "sigungu_code": "27720"
+    },
+    {
+      "sido": "대구광역시",
+      "eupmyeon": "산성면",
+      "BJCD": "2772036000",
+      "sigungu_code": "27720"
+    },
+    {
+      "sido": "대구광역시",
+      "eupmyeon": "소보면",
+      "BJCD": "2772031000",
+      "sigungu_code": "27720"
+    },
+    {
+      "sido": "대구광역시",
+      "eupmyeon": "우보면",
+      "BJCD": "2772034000",
+      "sigungu_code": "27720"
+    },
+    {
+      "sido": "대구광역시",
+      "eupmyeon": "삼국유사면",
+      "BJCD": "2772037000",
+      "sigungu_code": "27720"
+    },
+    {
+      "sido": "인천광역시",
+      "eupmyeon": "덕적면",
+      "BJCD": "2872035000",
+      "sigungu_code": "28720"
+    },
+    {
+      "sido": "인천광역시",
+      "eupmyeon": "자월면",
+      "BJCD": "2872037000",
+      "sigungu_code": "28720"
+    },
+    {
+      "sido": "울산광역시",
+      "eupmyeon": "두서면",
+      "BJCD": "3171037000",
+      "sigungu_code": "31710"
+    },
+    {
+      "sido": "울산광역시",
+      "eupmyeon": "상북면",
+      "BJCD": "3171038000",
+      "sigungu_code": "31710"
+    },
+    {
+      "sido": "울산광역시",
+      "eupmyeon": "삼동면",
+      "BJCD": "3171040000",
+      "sigungu_code": "31710"
+    },
+    {
+      "sido": "울산광역시",
+      "eupmyeon": "두동면",
+      "BJCD": "3171036000",
+      "sigungu_code": "31710"
+    },
+    {
+      "sido": "경기도",
+      "eupmyeon": "양동면",
+      "BJCD": "4183038000",
+      "sigungu_code": "41830"
+    },
+    {
+      "sido": "경기도",
+      "eupmyeon": "청평면",
+      "BJCD": "4182032500",
+      "sigungu_code": "41820"
+    },
+    {
+      "sido": "경기도",
+      "eupmyeon": "이동면",
+      "BJCD": "4165038000",
+      "sigungu_code": "41650"
+    },
+    {
+      "sido": "경기도",
+      "eupmyeon": "설악면",
+      "BJCD": "4182031000",
+      "sigungu_code": "41820"
+    },
+    {
+      "sido": "경기도",
+      "eupmyeon": "단월면",
+      "BJCD": "4183036000",
+      "sigungu_code": "41830"
+    },
+    {
+      "sido": "경기도",
+      "eupmyeon": "신서면",
+      "BJCD": "4180036000",
+      "sigungu_code": "41800"
+    },
+    {
+      "sido": "경기도",
+      "eupmyeon": "산북면",
+      "BJCD": "4167038000",
+      "sigungu_code": "41670"
+    },
+    {
+      "sido": "경기도",
+      "eupmyeon": "서종면",
+      "BJCD": "4183035000",
+      "sigungu_code": "41830"
+    },
+    {
+      "sido": "경기도",
+      "eupmyeon": "청운면",
+      "BJCD": "4183037000",
+      "sigungu_code": "41830"
+    },
+    {
+      "sido": "경기도",
+      "eupmyeon": "수동면",
+      "BJCD": "4136034000",
+      "sigungu_code": "41360"
+    },
+    {
+      "sido": "경기도",
+      "eupmyeon": "금광면",
+      "BJCD": "4155032000",
+      "sigungu_code": "41550"
+    },
+    {
+      "sido": "경기도",
+      "eupmyeon": "내촌면",
+      "BJCD": "4165032000",
+      "sigungu_code": "41650"
+    },
+    {
+      "sido": "경기도",
+      "eupmyeon": "조종면",
+      "BJCD": "4182034500",
+      "sigungu_code": "41820"
+    },
+    {
+      "sido": "경기도",
+      "eupmyeon": "북면",
+      "BJCD": "4182035000",
+      "sigungu_code": "41820"
+    },
+    {
+      "sido": "경기도",
+      "eupmyeon": "남한산성면",
+      "BJCD": "4161037000",
+      "sigungu_code": "41610"
+    },
+    {
+      "sido": "경기도",
+      "eupmyeon": "상면",
+      "BJCD": "4182033000",
+      "sigungu_code": "41820"
+    },
+    {
+      "sido": "경기도",
+      "eupmyeon": "옥천면",
+      "BJCD": "4183034000",
+      "sigungu_code": "41830"
+    },
+    {
+      "sido": "경기도",
+      "eupmyeon": "가평읍",
+      "BJCD": "4182025000",
+      "sigungu_code": "41820"
+    },
+    {
+      "sido": "경기도",
+      "eupmyeon": "신북면",
+      "BJCD": "4165034000",
+      "sigungu_code": "41650"
+    },
+    {
+      "sido": "강원특별자치도",
+      "eupmyeon": "우천면",
+      "BJCD": "5173031000",
+      "sigungu_code": "51730"
+    },
+    {
+      "sido": "강원특별자치도",
+      "eupmyeon": "두촌면",
+      "BJCD": "5172032000",
+      "sigungu_code": "51720"
+    },
+    {
+      "sido": "강원특별자치도",
+      "eupmyeon": "서석면",
+      "BJCD": "5172034000",
+      "sigungu_code": "51720"
+    },
+    {
+      "sido": "강원특별자치도",
+      "eupmyeon": "진부면",
+      "BJCD": "5176036000",
+      "sigungu_code": "51760"
+    },
+    {
+      "sido": "강원특별자치도",
+      "eupmyeon": "서화면",
+      "BJCD": "5181034000",
+      "sigungu_code": "51810"
+    },
+    {
+      "sido": "강원특별자치도",
+      "eupmyeon": "토성면",
+      "BJCD": "5182033000",
+      "sigungu_code": "51820"
+    },
+    {
+      "sido": "강원특별자치도",
+      "eupmyeon": "방림면",
+      "BJCD": "5176032000",
+      "sigungu_code": "51760"
+    },
+    {
+      "sido": "강원특별자치도",
+      "eupmyeon": "안흥면",
+      "BJCD": "5173032000",
+      "sigungu_code": "51730"
+    },
+    {
+      "sido": "강원특별자치도",
+      "eupmyeon": "갑천면",
+      "BJCD": "5173034000",
+      "sigungu_code": "51730"
+    },
+    {
+      "sido": "강원특별자치도",
+      "eupmyeon": "평창읍",
+      "BJCD": "5176025000",
+      "sigungu_code": "51760"
+    },
+    {
+      "sido": "강원특별자치도",
+      "eupmyeon": "화암면",
+      "BJCD": "5177036000",
+      "sigungu_code": "51770"
+    },
+    {
+      "sido": "강원특별자치도",
+      "eupmyeon": "남면",
+      "BJCD": "5111034000",
+      "sigungu_code": "51110",
+      "ambiguous": true
+    },
+    {
+      "sido": "강원특별자치도",
+      "eupmyeon": "남면",
+      "BJCD": "5172036000",
+      "sigungu_code": "51720",
+      "ambiguous": true
+    },
+    {
+      "sido": "강원특별자치도",
+      "eupmyeon": "남면",
+      "BJCD": "5175034000",
+      "sigungu_code": "51750",
+      "ambiguous": true
+    },
+    {
+      "sido": "강원특별자치도",
+      "eupmyeon": "남면",
+      "BJCD": "5177032000",
+      "sigungu_code": "51770",
+      "ambiguous": true
+    },
+    {
+      "sido": "강원특별자치도",
+      "eupmyeon": "남면",
+      "BJCD": "5181031000",
+      "sigungu_code": "51810",
+      "ambiguous": true
+    },
+    {
+      "sido": "강원특별자치도",
+      "eupmyeon": "공근면",
+      "BJCD": "5173036000",
+      "sigungu_code": "51730"
+    },
+    {
+      "sido": "강원특별자치도",
+      "eupmyeon": "내촌면",
+      "BJCD": "5172033000",
+      "sigungu_code": "51720"
+    },
+    {
+      "sido": "강원특별자치도",
+      "eupmyeon": "남산면",
+      "BJCD": "5111040000",
+      "sigungu_code": "51110"
+    },
+    {
+      "sido": "강원특별자치도",
+      "eupmyeon": "무릉도원면",
+      "BJCD": "5175038000",
+      "sigungu_code": "51750"
+    },
+    {
+      "sido": "강원특별자치도",
+      "eupmyeon": "신기면",
+      "BJCD": "5123036000",
+      "sigungu_code": "51230"
+    },
+    {
+      "sido": "강원특별자치도",
+      "eupmyeon": "주천면",
+      "BJCD": "5175036000",
+      "sigungu_code": "51750"
+    },
+    {
+      "sido": "강원특별자치도",
+      "eupmyeon": "현북면",
+      "BJCD": "5183033000",
+      "sigungu_code": "51830"
+    },
+    {
+      "sido": "강원특별자치도",
+      "eupmyeon": "미탄면",
+      "BJCD": "5176031000",
+      "sigungu_code": "51760"
+    },
+    {
+      "sido": "강원특별자치도",
+      "eupmyeon": "사내면",
+      "BJCD": "5179034000",
+      "sigungu_code": "51790"
+    },
+    {
+      "sido": "강원특별자치도",
+      "eupmyeon": "하장면",
+      "BJCD": "5123032000",
+      "sigungu_code": "51230"
+    },
+    {
+      "sido": "강원특별자치도",
+      "eupmyeon": "서원면",
+      "BJCD": "5173037000",
+      "sigungu_code": "51730"
+    },
+    {
+      "sido": "강원특별자치도",
+      "eupmyeon": "신동읍",
+      "BJCD": "5177025900",
+      "sigungu_code": "51770"
+    },
+    {
+      "sido": "강원특별자치도",
+      "eupmyeon": "왕산면",
+      "BJCD": "5115032000",
+      "sigungu_code": "51150"
+    },
+    {
+      "sido": "강원특별자치도",
+      "eupmyeon": "동산면",
+      "BJCD": "5111032000",
+      "sigungu_code": "51110"
+    },
+    {
+      "sido": "강원특별자치도",
+      "eupmyeon": "귀래면",
+      "BJCD": "5113036000",
+      "sigungu_code": "51130"
+    },
+    {
+      "sido": "강원특별자치도",
+      "eupmyeon": "상동읍",
+      "BJCD": "5175025300",
+      "sigungu_code": "51750"
+    },
+    {
+      "sido": "강원특별자치도",
+      "eupmyeon": "신림면",
+      "BJCD": "5113039000",
+      "sigungu_code": "51130"
+    },
+    {
+      "sido": "강원특별자치도",
+      "eupmyeon": "상서면",
+      "BJCD": "5179033000",
+      "sigungu_code": "51790"
+    },
+    {
+      "sido": "강원특별자치도",
+      "eupmyeon": "청일면",
+      "BJCD": "5173035000",
+      "sigungu_code": "51730"
+    },
+    {
+      "sido": "강원특별자치도",
+      "eupmyeon": "근남면",
+      "BJCD": "5178032000",
+      "sigungu_code": "51780"
+    },
+    {
+      "sido": "강원특별자치도",
+      "eupmyeon": "연곡면",
+      "BJCD": "5115037000",
+      "sigungu_code": "51150"
+    },
+    {
+      "sido": "강원특별자치도",
+      "eupmyeon": "화촌면",
+      "BJCD": "5172031000",
+      "sigungu_code": "51720"
+    },
+    {
+      "sido": "강원특별자치도",
+      "eupmyeon": "대화면",
+      "BJCD": "5176033000",
+      "sigungu_code": "51760"
+    },
+    {
+      "sido": "강원특별자치도",
+      "eupmyeon": "가곡면",
+      "BJCD": "5123035000",
+      "sigungu_code": "51230"
+    },
+    {
+      "sido": "강원특별자치도",
+      "eupmyeon": "정선읍",
+      "BJCD": "5177025000",
+      "sigungu_code": "51770"
+    },
+    {
+      "sido": "강원특별자치도",
+      "eupmyeon": "원덕읍",
+      "BJCD": "5123025300",
+      "sigungu_code": "51230"
+    },
+    {
+      "sido": "강원특별자치도",
+      "eupmyeon": "양구읍",
+      "BJCD": "5180025000",
+      "sigungu_code": "51800"
+    },
+    {
+      "sido": "강원특별자치도",
+      "eupmyeon": "임계면",
+      "BJCD": "5177035000",
+      "sigungu_code": "51770"
+    },
+    {
+      "sido": "강원특별자치도",
+      "eupmyeon": "한반도면",
+      "BJCD": "5175035500",
+      "sigungu_code": "51750"
+    },
+    {
+      "sido": "강원특별자치도",
+      "eupmyeon": "내면",
+      "BJCD": "5172039000",
+      "sigungu_code": "51720"
+    },
+    {
+      "sido": "강원특별자치도",
+      "eupmyeon": "서면",
+      "BJCD": "5111035000",
+      "sigungu_code": "51110",
+      "ambiguous": true
+    },
+    {
+      "sido": "강원특별자치도",
+      "eupmyeon": "서면",
+      "BJCD": "5172037000",
+      "sigungu_code": "51720",
+      "ambiguous": true
+    },
+    {
+      "sido": "강원특별자치도",
+      "eupmyeon": "서면",
+      "BJCD": "5178031000",
+      "sigungu_code": "51780",
+      "ambiguous": true
+    },
+    {
+      "sido": "강원특별자치도",
+      "eupmyeon": "서면",
+      "BJCD": "5183031000",
+      "sigungu_code": "51830",
+      "ambiguous": true
+    },
+    {
+      "sido": "강원특별자치도",
+      "eupmyeon": "판부면",
+      "BJCD": "5113038000",
+      "sigungu_code": "51130"
+    },
+    {
+      "sido": "강원특별자치도",
+      "eupmyeon": "간동면",
+      "BJCD": "5179031000",
+      "sigungu_code": "51790"
+    },
+    {
+      "sido": "강원특별자치도",
+      "eupmyeon": "북산면",
+      "BJCD": "5111038000",
+      "sigungu_code": "51110"
+    },
+    {
+      "sido": "강원특별자치도",
+      "eupmyeon": "신동면",
+      "BJCD": "5111033000",
+      "sigungu_code": "51110"
+    },
+    {
+      "sido": "강원특별자치도",
+      "eupmyeon": "미로면",
+      "BJCD": "5123034000",
+      "sigungu_code": "51230"
+    },
+    {
+      "sido": "강원특별자치도",
+      "eupmyeon": "동면",
+      "BJCD": "5111031000",
+      "sigungu_code": "51110",
+      "ambiguous": true
+    },
+    {
+      "sido": "강원특별자치도",
+      "eupmyeon": "동면",
+      "BJCD": "5180032000",
+      "sigungu_code": "51800",
+      "ambiguous": true
+    },
+    {
+      "sido": "강원특별자치도",
+      "eupmyeon": "현남면",
+      "BJCD": "5183034000",
+      "sigungu_code": "51830"
+    },
+    {
+      "sido": "강원특별자치도",
+      "eupmyeon": "사천면",
+      "BJCD": "5115036000",
+      "sigungu_code": "51150"
+    },
+    {
+      "sido": "강원특별자치도",
+      "eupmyeon": "산솔면",
+      "BJCD": "5175031200",
+      "sigungu_code": "51750"
+    },
+    {
+      "sido": "강원특별자치도",
+      "eupmyeon": "성산면",
+      "BJCD": "5115031000",
+      "sigungu_code": "51150"
+    },
+    {
+      "sido": "강원특별자치도",
+      "eupmyeon": "노곡면",
+      "BJCD": "5123033000",
+      "sigungu_code": "51230"
+    },
+    {
+      "sido": "강원특별자치도",
+      "eupmyeon": "북면",
+      "BJCD": "5175033000",
+      "sigungu_code": "51750",
+      "ambiguous": true
+    },
+    {
+      "sido": "강원특별자치도",
+      "eupmyeon": "북면",
+      "BJCD": "5181032000",
+      "sigungu_code": "51810",
+      "ambiguous": true
+    },
+    {
+      "sido": "강원특별자치도",
+      "eupmyeon": "대관령면",
+      "BJCD": "5176038000",
+      "sigungu_code": "51760"
+    },
+    {
+      "sido": "강원특별자치도",
+      "eupmyeon": "기린면",
+      "BJCD": "5181033000",
+      "sigungu_code": "51810"
+    },
+    {
+      "sido": "강원특별자치도",
+      "eupmyeon": "북평면",
+      "BJCD": "5177034000",
+      "sigungu_code": "51770"
+    },
+    {
+      "sido": "강원특별자치도",
+      "eupmyeon": "방산면",
+      "BJCD": "5180033000",
+      "sigungu_code": "51800"
+    },
+    {
+      "sido": "강원특별자치도",
+      "eupmyeon": "근덕면",
+      "BJCD": "5123031000",
+      "sigungu_code": "51230"
+    },
+    {
+      "sido": "강원특별자치도",
+      "eupmyeon": "사북면",
+      "BJCD": "5111036000",
+      "sigungu_code": "51110"
+    },
+    {
+      "sido": "강원특별자치도",
+      "eupmyeon": "여량면",
+      "BJCD": "5177037000",
+      "sigungu_code": "51770"
+    },
+    {
+      "sido": "강원특별자치도",
+      "eupmyeon": "영월읍",
+      "BJCD": "5175025000",
+      "sigungu_code": "51750"
+    },
+    {
+      "sido": "강원특별자치도",
+      "eupmyeon": "강림면",
+      "BJCD": "5173038000",
+      "sigungu_code": "51730"
+    },
+    {
+      "sido": "강원특별자치도",
+      "eupmyeon": "고한읍",
+      "BJCD": "5177025300",
+      "sigungu_code": "51770"
+    },
+    {
+      "sido": "강원특별자치도",
+      "eupmyeon": "하남면",
+      "BJCD": "5179032000",
+      "sigungu_code": "51790"
+    },
+    {
+      "sido": "강원특별자치도",
+      "eupmyeon": "사북읍",
+      "BJCD": "5177025600",
+      "sigungu_code": "51770"
+    },
+    {
+      "sido": "강원특별자치도",
+      "eupmyeon": "북방면",
+      "BJCD": "5172038000",
+      "sigungu_code": "51720"
+    },
+    {
+      "sido": "강원특별자치도",
+      "eupmyeon": "소초면",
+      "BJCD": "5113031000",
+      "sigungu_code": "51130"
+    },
+    {
+      "sido": "강원특별자치도",
+      "eupmyeon": "영귀미면",
+      "BJCD": "5172035200",
+      "sigungu_code": "51720"
+    },
+    {
+      "sido": "강원특별자치도",
+      "eupmyeon": "화천읍",
+      "BJCD": "5179025000",
+      "sigungu_code": "51790"
+    },
+    {
+      "sido": "강원특별자치도",
+      "eupmyeon": "상남면",
+      "BJCD": "5181035000",
+      "sigungu_code": "51810"
+    },
+    {
+      "sido": "강원특별자치도",
+      "eupmyeon": "도계읍",
+      "BJCD": "5123025000",
+      "sigungu_code": "51230"
+    },
+    {
+      "sido": "강원특별자치도",
+      "eupmyeon": "강동면",
+      "BJCD": "5115034000",
+      "sigungu_code": "51150"
+    },
+    {
+      "sido": "강원특별자치도",
+      "eupmyeon": "김삿갓면",
+      "BJCD": "5175032500",
+      "sigungu_code": "51750"
+    },
+    {
+      "sido": "강원특별자치도",
+      "eupmyeon": "옥계면",
+      "BJCD": "5115035000",
+      "sigungu_code": "51150"
+    },
+    {
+      "sido": "강원특별자치도",
+      "eupmyeon": "간성읍",
+      "BJCD": "5182025000",
+      "sigungu_code": "51820"
+    },
+    {
+      "sido": "강원특별자치도",
+      "eupmyeon": "인제읍",
+      "BJCD": "5181025000",
+      "sigungu_code": "51810"
+    },
+    {
+      "sido": "강원특별자치도",
+      "eupmyeon": "용평면",
+      "BJCD": "5176035000",
+      "sigungu_code": "51760"
+    },
+    {
+      "sido": "강원특별자치도",
+      "eupmyeon": "갈말읍",
+      "BJCD": "5178025600",
+      "sigungu_code": "51780"
+    },
+    {
+      "sido": "강원특별자치도",
+      "eupmyeon": "봉평면",
+      "BJCD": "5176034000",
+      "sigungu_code": "51760"
+    },
+    {
+      "sido": "충청북도",
+      "eupmyeon": "산척면",
+      "BJCD": "4313041000",
+      "sigungu_code": "43130"
+    },
+    {
+      "sido": "충청북도",
+      "eupmyeon": "미원면",
+      "BJCD": "4311132000",
+      "sigungu_code": "43111"
+    },
+    {
+      "sido": "충청북도",
+      "eupmyeon": "산외면",
+      "BJCD": "4372040000",
+      "sigungu_code": "43720"
+    },
+    {
+      "sido": "충청북도",
+      "eupmyeon": "낭성면",
+      "BJCD": "4311131000",
+      "sigungu_code": "43111"
+    },
+    {
+      "sido": "충청북도",
+      "eupmyeon": "문광면",
+      "BJCD": "4376035000",
+      "sigungu_code": "43760"
+    },
+    {
+      "sido": "충청북도",
+      "eupmyeon": "단성면",
+      "BJCD": "4380036000",
+      "sigungu_code": "43800"
+    },
+    {
+      "sido": "충청북도",
+      "eupmyeon": "앙성면",
+      "BJCD": "4313037000",
+      "sigungu_code": "43130"
+    },
+    {
+      "sido": "충청북도",
+      "eupmyeon": "황간면",
+      "BJCD": "4374032000",
+      "sigungu_code": "43740"
+    },
+    {
+      "sido": "충청북도",
+      "eupmyeon": "대강면",
+      "BJCD": "4380031000",
+      "sigungu_code": "43800"
+    },
+    {
+      "sido": "충청북도",
+      "eupmyeon": "상촌면",
+      "BJCD": "4374035000",
+      "sigungu_code": "43740"
+    },
+    {
+      "sido": "충청북도",
+      "eupmyeon": "매포읍",
+      "BJCD": "4380025300",
+      "sigungu_code": "43800"
+    },
+    {
+      "sido": "충청북도",
+      "eupmyeon": "회인면",
+      "BJCD": "4372038500",
+      "sigungu_code": "43720"
+    },
+    {
+      "sido": "충청북도",
+      "eupmyeon": "송학면",
+      "BJCD": "4315038000",
+      "sigungu_code": "43150"
+    },
+    {
+      "sido": "충청북도",
+      "eupmyeon": "영춘면",
+      "BJCD": "4380033000",
+      "sigungu_code": "43800"
+    },
+    {
+      "sido": "충청북도",
+      "eupmyeon": "연풍면",
+      "BJCD": "4376033000",
+      "sigungu_code": "43760"
+    },
+    {
+      "sido": "충청북도",
+      "eupmyeon": "양강면",
+      "BJCD": "4374036000",
+      "sigungu_code": "43740"
+    },
+    {
+      "sido": "충청북도",
+      "eupmyeon": "어상천면",
+      "BJCD": "4380034000",
+      "sigungu_code": "43800"
+    },
+    {
+      "sido": "충청북도",
+      "eupmyeon": "마로면",
+      "BJCD": "4372033000",
+      "sigungu_code": "43720"
+    },
+    {
+      "sido": "충청북도",
+      "eupmyeon": "백운면",
+      "BJCD": "4315036000",
+      "sigungu_code": "43150"
+    },
+    {
+      "sido": "충청북도",
+      "eupmyeon": "양산면",
+      "BJCD": "4374039000",
+      "sigungu_code": "43740"
+    },
+    {
+      "sido": "충청북도",
+      "eupmyeon": "덕산면",
+      "BJCD": "4315034000",
+      "sigungu_code": "43150"
+    },
+    {
+      "sido": "충청북도",
+      "eupmyeon": "청천면",
+      "BJCD": "4376036000",
+      "sigungu_code": "43760"
+    },
+    {
+      "sido": "충청북도",
+      "eupmyeon": "수안보면",
+      "BJCD": "4313032500",
+      "sigungu_code": "43130"
+    },
+    {
+      "sido": "충청북도",
+      "eupmyeon": "장연면",
+      "BJCD": "4376032000",
+      "sigungu_code": "43760"
+    },
+    {
+      "sido": "충청북도",
+      "eupmyeon": "적성면",
+      "BJCD": "4380035000",
+      "sigungu_code": "43800"
+    },
+    {
+      "sido": "충청북도",
+      "eupmyeon": "칠성면",
+      "BJCD": "4376034000",
+      "sigungu_code": "43760"
+    },
+    {
+      "sido": "충청북도",
+      "eupmyeon": "용화면",
+      "BJCD": "4374037000",
+      "sigungu_code": "43740"
+    },
+    {
+      "sido": "충청북도",
+      "eupmyeon": "군서면",
+      "BJCD": "4373037000",
+      "sigungu_code": "43730"
+    },
+    {
+      "sido": "충청북도",
+      "eupmyeon": "속리산면",
+      "BJCD": "4372031500",
+      "sigungu_code": "43720"
+    },
+    {
+      "sido": "충청북도",
+      "eupmyeon": "소태면",
+      "BJCD": "4313043000",
+      "sigungu_code": "43130"
+    },
+    {
+      "sido": "충청북도",
+      "eupmyeon": "백곡면",
+      "BJCD": "4375034000",
+      "sigungu_code": "43750"
+    },
+    {
+      "sido": "충청북도",
+      "eupmyeon": "안내면",
+      "BJCD": "4373033000",
+      "sigungu_code": "43730"
+    },
+    {
+      "sido": "충청북도",
+      "eupmyeon": "금성면",
+      "BJCD": "4315031000",
+      "sigungu_code": "43150"
+    },
+    {
+      "sido": "충청북도",
+      "eupmyeon": "봉양읍",
+      "BJCD": "4315025000",
+      "sigungu_code": "43150"
+    },
+    {
+      "sido": "충청북도",
+      "eupmyeon": "추풍령면",
+      "BJCD": "4374033500",
+      "sigungu_code": "43740"
+    },
+    {
+      "sido": "충청북도",
+      "eupmyeon": "단양읍",
+      "BJCD": "4380025000",
+      "sigungu_code": "43800"
+    },
+    {
+      "sido": "충청북도",
+      "eupmyeon": "가곡면",
+      "BJCD": "4380032000",
+      "sigungu_code": "43800"
+    },
+    {
+      "sido": "충청북도",
+      "eupmyeon": "한수면",
+      "BJCD": "4315035000",
+      "sigungu_code": "43150"
+    },
+    {
+      "sido": "충청북도",
+      "eupmyeon": "매곡면",
+      "BJCD": "4374034000",
+      "sigungu_code": "43740"
+    },
+    {
+      "sido": "충청북도",
+      "eupmyeon": "학산면",
+      "BJCD": "4374038000",
+      "sigungu_code": "43740"
+    },
+    {
+      "sido": "충청북도",
+      "eupmyeon": "내북면",
+      "BJCD": "4372039000",
+      "sigungu_code": "43720"
+    },
+    {
+      "sido": "충청남도",
+      "eupmyeon": "광덕면",
+      "BJCD": "4413132000",
+      "sigungu_code": "44131"
+    },
+    {
+      "sido": "충청남도",
+      "eupmyeon": "미산면",
+      "BJCD": "4418039000",
+      "sigungu_code": "44180"
+    },
+    {
+      "sido": "충청남도",
+      "eupmyeon": "군북면",
+      "BJCD": "4471034000",
+      "sigungu_code": "44710"
+    },
+    {
+      "sido": "충청남도",
+      "eupmyeon": "신풍면",
+      "BJCD": "4415040000",
+      "sigungu_code": "44150"
+    },
+    {
+      "sido": "충청남도",
+      "eupmyeon": "송악면",
+      "BJCD": "4420031000",
+      "sigungu_code": "44200"
+    },
+    {
+      "sido": "충청남도",
+      "eupmyeon": "대치면",
+      "BJCD": "4479032000",
+      "sigungu_code": "44790"
+    },
+    {
+      "sido": "충청남도",
+      "eupmyeon": "사곡면",
+      "BJCD": "4415039000",
+      "sigungu_code": "44150"
+    },
+    {
+      "sido": "충청남도",
+      "eupmyeon": "성주면",
+      "BJCD": "4418040000",
+      "sigungu_code": "44180"
+    },
+    {
+      "sido": "충청남도",
+      "eupmyeon": "남이면",
+      "BJCD": "4471036000",
+      "sigungu_code": "44710"
+    },
+    {
+      "sido": "충청남도",
+      "eupmyeon": "외산면",
+      "BJCD": "4476033000",
+      "sigungu_code": "44760"
+    },
+    {
+      "sido": "충청남도",
+      "eupmyeon": "벌곡면",
+      "BJCD": "4423038000",
+      "sigungu_code": "44230"
+    },
+    {
+      "sido": "충청남도",
+      "eupmyeon": "북면",
+      "BJCD": "4413133000",
+      "sigungu_code": "44131"
+    },
+    {
+      "sido": "충청남도",
+      "eupmyeon": "유구읍",
+      "BJCD": "4415025000",
+      "sigungu_code": "44150"
+    },
+    {
+      "sido": "충청남도",
+      "eupmyeon": "반포면",
+      "BJCD": "4415034000",
+      "sigungu_code": "44150"
+    },
+    {
+      "sido": "충청남도",
+      "eupmyeon": "복수면",
+      "BJCD": "4471038000",
+      "sigungu_code": "44710"
+    },
+    {
+      "sido": "충청남도",
+      "eupmyeon": "정산면",
+      "BJCD": "4479033000",
+      "sigungu_code": "44790"
+    },
+    {
+      "sido": "충청남도",
+      "eupmyeon": "진산면",
+      "BJCD": "4471037000",
+      "sigungu_code": "44710"
+    },
+    {
+      "sido": "충청남도",
+      "eupmyeon": "정안면",
+      "BJCD": "4415037000",
+      "sigungu_code": "44150"
+    },
+    {
+      "sido": "충청남도",
+      "eupmyeon": "내산면",
+      "BJCD": "4476034000",
+      "sigungu_code": "44760"
+    },
+    {
+      "sido": "전북특별자치도",
+      "eupmyeon": "화산면",
+      "BJCD": "5271039000",
+      "sigungu_code": "52710"
+    },
+    {
+      "sido": "전북특별자치도",
+      "eupmyeon": "산외면",
+      "BJCD": "5218044000",
+      "sigungu_code": "52180"
+    },
+    {
+      "sido": "전북특별자치도",
+      "eupmyeon": "복흥면",
+      "BJCD": "5277037000",
+      "sigungu_code": "52770"
+    },
+    {
+      "sido": "전북특별자치도",
+      "eupmyeon": "변산면",
+      "BJCD": "5280036000",
+      "sigungu_code": "52800"
+    },
+    {
+      "sido": "전북특별자치도",
+      "eupmyeon": "운주면",
+      "BJCD": "5271038000",
+      "sigungu_code": "52710"
+    },
+    {
+      "sido": "전북특별자치도",
+      "eupmyeon": "상전면",
+      "BJCD": "5272034000",
+      "sigungu_code": "52720"
+    },
+    {
+      "sido": "전북특별자치도",
+      "eupmyeon": "산동면",
+      "BJCD": "5219041000",
+      "sigungu_code": "52190"
+    },
+    {
+      "sido": "전북특별자치도",
+      "eupmyeon": "상관면",
+      "BJCD": "5271032000",
+      "sigungu_code": "52710"
+    },
+    {
+      "sido": "전북특별자치도",
+      "eupmyeon": "비봉면",
+      "BJCD": "5271037000",
+      "sigungu_code": "52710"
+    },
+    {
+      "sido": "전북특별자치도",
+      "eupmyeon": "용담면",
+      "BJCD": "5272031000",
+      "sigungu_code": "52720"
+    },
+    {
+      "sido": "전북특별자치도",
+      "eupmyeon": "백운면",
+      "BJCD": "5272035000",
+      "sigungu_code": "52720"
+    },
+    {
+      "sido": "전북특별자치도",
+      "eupmyeon": "부귀면",
+      "BJCD": "5272038000",
+      "sigungu_code": "52720"
+    },
+    {
+      "sido": "전북특별자치도",
+      "eupmyeon": "신덕면",
+      "BJCD": "5275036000",
+      "sigungu_code": "52750"
+    },
+    {
+      "sido": "전북특별자치도",
+      "eupmyeon": "소양면",
+      "BJCD": "5271034000",
+      "sigungu_code": "52710"
+    },
+    {
+      "sido": "전북특별자치도",
+      "eupmyeon": "번암면",
+      "BJCD": "5274032000",
+      "sigungu_code": "52740"
+    },
+    {
+      "sido": "전북특별자치도",
+      "eupmyeon": "진안읍",
+      "BJCD": "5272025000",
+      "sigungu_code": "52720"
+    },
+    {
+      "sido": "전북특별자치도",
+      "eupmyeon": "장계면",
+      "BJCD": "5274033500",
+      "sigungu_code": "52740"
+    },
+    {
+      "sido": "전북특별자치도",
+      "eupmyeon": "위도면",
+      "BJCD": "5280042000",
+      "sigungu_code": "52800"
+    },
+    {
+      "sido": "전북특별자치도",
+      "eupmyeon": "설천면",
+      "BJCD": "5273032000",
+      "sigungu_code": "52730"
+    },
+    {
+      "sido": "전북특별자치도",
+      "eupmyeon": "무주읍",
+      "BJCD": "5273025000",
+      "sigungu_code": "52730"
+    },
+    {
+      "sido": "전북특별자치도",
+      "eupmyeon": "무풍면",
+      "BJCD": "5273031000",
+      "sigungu_code": "52730"
+    },
+    {
+      "sido": "전북특별자치도",
+      "eupmyeon": "고산면",
+      "BJCD": "5271036000",
+      "sigungu_code": "52710"
+    },
+    {
+      "sido": "전북특별자치도",
+      "eupmyeon": "산내면",
+      "BJCD": "5218043000",
+      "sigungu_code": "52180",
+      "ambiguous": true
+    },
+    {
+      "sido": "전북특별자치도",
+      "eupmyeon": "산내면",
+      "BJCD": "5219046000",
+      "sigungu_code": "52190",
+      "ambiguous": true
+    },
+    {
+      "sido": "전북특별자치도",
+      "eupmyeon": "진서면",
+      "BJCD": "5280037000",
+      "sigungu_code": "52800"
+    },
+    {
+      "sido": "전북특별자치도",
+      "eupmyeon": "안성면",
+      "BJCD": "5273034000",
+      "sigungu_code": "52730"
+    },
+    {
+      "sido": "전북특별자치도",
+      "eupmyeon": "동계면",
+      "BJCD": "5277032000",
+      "sigungu_code": "52770"
+    },
+    {
+      "sido": "전북특별자치도",
+      "eupmyeon": "구림면",
+      "BJCD": "5277040000",
+      "sigungu_code": "52770"
+    },
+    {
+      "sido": "전북특별자치도",
+      "eupmyeon": "성수면",
+      "BJCD": "5272036000",
+      "sigungu_code": "52720",
+      "ambiguous": true
+    },
+    {
+      "sido": "전북특별자치도",
+      "eupmyeon": "성수면",
+      "BJCD": "5275034000",
+      "sigungu_code": "52750",
+      "ambiguous": true
+    },
+    {
+      "sido": "전북특별자치도",
+      "eupmyeon": "쌍치면",
+      "BJCD": "5277036000",
+      "sigungu_code": "52770"
+    },
+    {
+      "sido": "전북특별자치도",
+      "eupmyeon": "경천면",
+      "BJCD": "5271041000",
+      "sigungu_code": "52710"
+    },
+    {
+      "sido": "전북특별자치도",
+      "eupmyeon": "구이면",
+      "BJCD": "5271035000",
+      "sigungu_code": "52710"
+    },
+    {
+      "sido": "전북특별자치도",
+      "eupmyeon": "칠보면",
+      "BJCD": "5218042000",
+      "sigungu_code": "52180"
+    },
+    {
+      "sido": "전북특별자치도",
+      "eupmyeon": "장수읍",
+      "BJCD": "5274025000",
+      "sigungu_code": "52740"
+    },
+    {
+      "sido": "전북특별자치도",
+      "eupmyeon": "부남면",
+      "BJCD": "5273035000",
+      "sigungu_code": "52730"
+    },
+    {
+      "sido": "전북특별자치도",
+      "eupmyeon": "동상면",
+      "BJCD": "5271040000",
+      "sigungu_code": "52710"
+    },
+    {
+      "sido": "전북특별자치도",
+      "eupmyeon": "정천면",
+      "BJCD": "5272039000",
+      "sigungu_code": "52720"
+    },
+    {
+      "sido": "전북특별자치도",
+      "eupmyeon": "동향면",
+      "BJCD": "5272033000",
+      "sigungu_code": "52720"
+    },
+    {
+      "sido": "전북특별자치도",
+      "eupmyeon": "덕치면",
+      "BJCD": "5275040000",
+      "sigungu_code": "52750"
+    },
+    {
+      "sido": "전북특별자치도",
+      "eupmyeon": "강진면",
+      "BJCD": "5275039000",
+      "sigungu_code": "52750"
+    },
+    {
+      "sido": "전북특별자치도",
+      "eupmyeon": "적상면",
+      "BJCD": "5273033000",
+      "sigungu_code": "52730"
+    },
+    {
+      "sido": "전북특별자치도",
+      "eupmyeon": "주천면",
+      "BJCD": "5219031000",
+      "sigungu_code": "52190",
+      "ambiguous": true
+    },
+    {
+      "sido": "전북특별자치도",
+      "eupmyeon": "주천면",
+      "BJCD": "5272040000",
+      "sigungu_code": "52720",
+      "ambiguous": true
+    },
+    {
+      "sido": "전북특별자치도",
+      "eupmyeon": "계북면",
+      "BJCD": "5274036000",
+      "sigungu_code": "52740"
+    },
+    {
+      "sido": "전라남도",
+      "eupmyeon": "대구면",
+      "BJCD": "4681033000",
+      "sigungu_code": "46810"
+    },
+    {
+      "sido": "전라남도",
+      "eupmyeon": "소안면",
+      "BJCD": "4689036000",
+      "sigungu_code": "46890"
+    },
+    {
+      "sido": "전라남도",
+      "eupmyeon": "봉래면",
+      "BJCD": "4677036000",
+      "sigungu_code": "46770"
+    },
+    {
+      "sido": "전라남도",
+      "eupmyeon": "오산면",
+      "BJCD": "4672040000",
+      "sigungu_code": "46720"
+    },
+    {
+      "sido": "전라남도",
+      "eupmyeon": "서면",
+      "BJCD": "4615032000",
+      "sigungu_code": "46150"
+    },
+    {
+      "sido": "전라남도",
+      "eupmyeon": "한천면",
+      "BJCD": "4679031000",
+      "sigungu_code": "46790"
+    },
+    {
+      "sido": "전라남도",
+      "eupmyeon": "석곡면",
+      "BJCD": "4672033000",
+      "sigungu_code": "46720"
+    },
+    {
+      "sido": "전라남도",
+      "eupmyeon": "산동면",
+      "BJCD": "4673037000",
+      "sigungu_code": "46730"
+    },
+    {
+      "sido": "전라남도",
+      "eupmyeon": "보길면",
+      "BJCD": "4689038000",
+      "sigungu_code": "46890"
+    },
+    {
+      "sido": "전라남도",
+      "eupmyeon": "옥룡면",
+      "BJCD": "4623032000",
+      "sigungu_code": "46230"
+    },
+    {
+      "sido": "전라남도",
+      "eupmyeon": "사평면",
+      "BJCD": "4679041500",
+      "sigungu_code": "46790"
+    },
+    {
+      "sido": "전라남도",
+      "eupmyeon": "율어면",
+      "BJCD": "4678034000",
+      "sigungu_code": "46780"
+    },
+    {
+      "sido": "전라남도",
+      "eupmyeon": "월등면",
+      "BJCD": "4615034000",
+      "sigungu_code": "46150"
+    },
+    {
+      "sido": "전라남도",
+      "eupmyeon": "외서면",
+      "BJCD": "4615037000",
+      "sigungu_code": "46150"
+    },
+    {
+      "sido": "전라남도",
+      "eupmyeon": "백아면",
+      "BJCD": "4679039500",
+      "sigungu_code": "46790"
+    },
+    {
+      "sido": "전라남도",
+      "eupmyeon": "동면",
+      "BJCD": "4679042000",
+      "sigungu_code": "46790"
+    },
+    {
+      "sido": "전라남도",
+      "eupmyeon": "옴천면",
+      "BJCD": "4681039000",
+      "sigungu_code": "46810"
+    },
+    {
+      "sido": "전라남도",
+      "eupmyeon": "청산면",
+      "BJCD": "4689035000",
+      "sigungu_code": "46890"
+    },
+    {
+      "sido": "전라남도",
+      "eupmyeon": "금당면",
+      "BJCD": "4689037000",
+      "sigungu_code": "46890"
+    },
+    {
+      "sido": "전라남도",
+      "eupmyeon": "옥곡면",
+      "BJCD": "4623033000",
+      "sigungu_code": "46230"
+    },
+    {
+      "sido": "전라남도",
+      "eupmyeon": "월산면",
+      "BJCD": "4671039000",
+      "sigungu_code": "46710"
+    },
+    {
+      "sido": "전라남도",
+      "eupmyeon": "간전면",
+      "BJCD": "4673032000",
+      "sigungu_code": "46730"
+    },
+    {
+      "sido": "전라남도",
+      "eupmyeon": "승주읍",
+      "BJCD": "4615025000",
+      "sigungu_code": "46150"
+    },
+    {
+      "sido": "전라남도",
+      "eupmyeon": "죽곡면",
+      "BJCD": "4672035000",
+      "sigungu_code": "46720"
+    },
+    {
+      "sido": "전라남도",
+      "eupmyeon": "유치면",
+      "BJCD": "4680035000",
+      "sigungu_code": "46800"
+    },
+    {
+      "sido": "전라남도",
+      "eupmyeon": "동복면",
+      "BJCD": "4679040000",
+      "sigungu_code": "46790"
+    },
+    {
+      "sido": "전라남도",
+      "eupmyeon": "이서면",
+      "BJCD": "4679038000",
+      "sigungu_code": "46790"
+    },
+    {
+      "sido": "전라남도",
+      "eupmyeon": "고달면",
+      "BJCD": "4672036000",
+      "sigungu_code": "46720"
+    },
+    {
+      "sido": "전라남도",
+      "eupmyeon": "삼산면",
+      "BJCD": "4613036000",
+      "sigungu_code": "46130",
+      "ambiguous": true
+    },
+    {
+      "sido": "전라남도",
+      "eupmyeon": "삼산면",
+      "BJCD": "4682031000",
+      "sigungu_code": "46820",
+      "ambiguous": true
+    },
+    {
+      "sido": "전라남도",
+      "eupmyeon": "봉강면",
+      "BJCD": "4623031000",
+      "sigungu_code": "46230"
+    },
+    {
+      "sido": "전라남도",
+      "eupmyeon": "용면",
+      "BJCD": "4671038000",
+      "sigungu_code": "46710"
+    },
+    {
+      "sido": "전라남도",
+      "eupmyeon": "생일면",
+      "BJCD": "4689039000",
+      "sigungu_code": "46890"
+    },
+    {
+      "sido": "전라남도",
+      "eupmyeon": "송광면",
+      "BJCD": "4615036000",
+      "sigungu_code": "46150"
+    },
+    {
+      "sido": "전라남도",
+      "eupmyeon": "조도면",
+      "BJCD": "4690036000",
+      "sigungu_code": "46900"
+    },
+    {
+      "sido": "전라남도",
+      "eupmyeon": "가사문학면",
+      "BJCD": "4671033500",
+      "sigungu_code": "46710"
+    },
+    {
+      "sido": "전라남도",
+      "eupmyeon": "토지면",
+      "BJCD": "4673033000",
+      "sigungu_code": "46730"
+    },
+    {
+      "sido": "전라남도",
+      "eupmyeon": "대덕면",
+      "BJCD": "4671035000",
+      "sigungu_code": "46710"
+    },
+    {
+      "sido": "전라남도",
+      "eupmyeon": "문척면",
+      "BJCD": "4673031000",
+      "sigungu_code": "46730"
+    },
+    {
+      "sido": "전라남도",
+      "eupmyeon": "북하면",
+      "BJCD": "4688040000",
+      "sigungu_code": "46880"
+    },
+    {
+      "sido": "전라남도",
+      "eupmyeon": "이양면",
+      "BJCD": "4679034000",
+      "sigungu_code": "46790"
+    },
+    {
+      "sido": "전라남도",
+      "eupmyeon": "다압면",
+      "BJCD": "4623036000",
+      "sigungu_code": "46230"
+    },
+    {
+      "sido": "전라남도",
+      "eupmyeon": "흑산면",
+      "BJCD": "4691036000",
+      "sigungu_code": "46910"
+    },
+    {
+      "sido": "전라남도",
+      "eupmyeon": "영남면",
+      "BJCD": "4677044000",
+      "sigungu_code": "46770"
+    },
+    {
+      "sido": "전라남도",
+      "eupmyeon": "낙월면",
+      "BJCD": "4687038000",
+      "sigungu_code": "46870"
+    },
+    {
+      "sido": "전라남도",
+      "eupmyeon": "문덕면",
+      "BJCD": "4678036000",
+      "sigungu_code": "46780"
+    },
+    {
+      "sido": "전라남도",
+      "eupmyeon": "진상면",
+      "BJCD": "4623034000",
+      "sigungu_code": "46230"
+    },
+    {
+      "sido": "전라남도",
+      "eupmyeon": "황전면",
+      "BJCD": "4615033000",
+      "sigungu_code": "46150"
+    },
+    {
+      "sido": "전라남도",
+      "eupmyeon": "청풍면",
+      "BJCD": "4679033000",
+      "sigungu_code": "46790"
+    },
+    {
+      "sido": "전라남도",
+      "eupmyeon": "군외면",
+      "BJCD": "4689031000",
+      "sigungu_code": "46890"
+    },
+    {
+      "sido": "전라남도",
+      "eupmyeon": "복내면",
+      "BJCD": "4678035000",
+      "sigungu_code": "46780"
+    },
+    {
+      "sido": "전라남도",
+      "eupmyeon": "도암면",
+      "BJCD": "4679037000",
+      "sigungu_code": "46790",
+      "ambiguous": true
+    },
+    {
+      "sido": "전라남도",
+      "eupmyeon": "도암면",
+      "BJCD": "4681034000",
+      "sigungu_code": "46810",
+      "ambiguous": true
+    },
+    {
+      "sido": "전라남도",
+      "eupmyeon": "금산면",
+      "BJCD": "4677033000",
+      "sigungu_code": "46770"
+    },
+    {
+      "sido": "전라남도",
+      "eupmyeon": "오곡면",
+      "BJCD": "4672031000",
+      "sigungu_code": "46720"
+    },
+    {
+      "sido": "경상북도",
+      "eupmyeon": "용암면",
+      "BJCD": "4784032000",
+      "sigungu_code": "47840"
+    },
+    {
+      "sido": "경상북도",
+      "eupmyeon": "금수면",
+      "BJCD": "4784035000",
+      "sigungu_code": "47840"
+    },
+    {
+      "sido": "경상북도",
+      "eupmyeon": "동명면",
+      "BJCD": "4785032000",
+      "sigungu_code": "47850"
+    },
+    {
+      "sido": "경상북도",
+      "eupmyeon": "녹전면",
+      "BJCD": "4717043000",
+      "sigungu_code": "47170"
+    },
+    {
+      "sido": "경상북도",
+      "eupmyeon": "안평면",
+      "BJCD": "4773046000",
+      "sigungu_code": "47730"
+    },
+    {
+      "sido": "경상북도",
+      "eupmyeon": "동로면",
+      "BJCD": "4728035000",
+      "sigungu_code": "47280"
+    },
+    {
+      "sido": "경상북도",
+      "eupmyeon": "가천면",
+      "BJCD": "4784034000",
+      "sigungu_code": "47840"
+    },
+    {
+      "sido": "경상북도",
+      "eupmyeon": "금강송면",
+      "BJCD": "4793039000",
+      "sigungu_code": "47930"
+    },
+    {
+      "sido": "경상북도",
+      "eupmyeon": "산북면",
+      "BJCD": "4728034000",
+      "sigungu_code": "47280"
+    },
+    {
+      "sido": "경상북도",
+      "eupmyeon": "운문면",
+      "BJCD": "4782035000",
+      "sigungu_code": "47820"
+    },
+    {
+      "sido": "경상북도",
+      "eupmyeon": "일월면",
+      "BJCD": "4776033000",
+      "sigungu_code": "47760"
+    },
+    {
+      "sido": "경상북도",
+      "eupmyeon": "가은읍",
+      "BJCD": "4728025300",
+      "sigungu_code": "47280"
+    },
+    {
+      "sido": "경상북도",
+      "eupmyeon": "죽장면",
+      "BJCD": "4711335000",
+      "sigungu_code": "47113"
+    },
+    {
+      "sido": "경상북도",
+      "eupmyeon": "고경면",
+      "BJCD": "4723038000",
+      "sigungu_code": "47230"
+    },
+    {
+      "sido": "경상북도",
+      "eupmyeon": "호계면",
+      "BJCD": "4728033000",
+      "sigungu_code": "47280"
+    },
+    {
+      "sido": "경상북도",
+      "eupmyeon": "매화면",
+      "BJCD": "4793040000",
+      "sigungu_code": "47930"
+    },
+    {
+      "sido": "경상북도",
+      "eupmyeon": "달산면",
+      "BJCD": "4777033000",
+      "sigungu_code": "47770"
+    },
+    {
+      "sido": "경상북도",
+      "eupmyeon": "단촌면",
+      "BJCD": "4773031000",
+      "sigungu_code": "47730"
+    },
+    {
+      "sido": "경상북도",
+      "eupmyeon": "송라면",
+      "BJCD": "4711333000",
+      "sigungu_code": "47113"
+    },
+    {
+      "sido": "경상북도",
+      "eupmyeon": "각남면",
+      "BJCD": "4782031000",
+      "sigungu_code": "47820"
+    },
+    {
+      "sido": "경상북도",
+      "eupmyeon": "모동면",
+      "BJCD": "4725038000",
+      "sigungu_code": "47250"
+    },
+    {
+      "sido": "경상북도",
+      "eupmyeon": "화북면",
+      "BJCD": "4723034000",
+      "sigungu_code": "47230",
+      "ambiguous": true
+    },
+    {
+      "sido": "경상북도",
+      "eupmyeon": "화북면",
+      "BJCD": "4725042000",
+      "sigungu_code": "47250",
+      "ambiguous": true
+    },
+    {
+      "sido": "경상북도",
+      "eupmyeon": "청도읍",
+      "BJCD": "4782025300",
+      "sigungu_code": "47820"
+    },
+    {
+      "sido": "경상북도",
+      "eupmyeon": "현서면",
+      "BJCD": "4775034000",
+      "sigungu_code": "47750"
+    },
+    {
+      "sido": "경상북도",
+      "eupmyeon": "영양읍",
+      "BJCD": "4776025000",
+      "sigungu_code": "47760"
+    },
+    {
+      "sido": "경상북도",
+      "eupmyeon": "조마면",
+      "BJCD": "4715040000",
+      "sigungu_code": "47150"
+    },
+    {
+      "sido": "경상북도",
+      "eupmyeon": "증산면",
+      "BJCD": "4715045000",
+      "sigungu_code": "47150"
+    },
+    {
+      "sido": "경상북도",
+      "eupmyeon": "기성면",
+      "BJCD": "4793035000",
+      "sigungu_code": "47930"
+    },
+    {
+      "sido": "경상북도",
+      "eupmyeon": "신녕면",
+      "BJCD": "4723032000",
+      "sigungu_code": "47230"
+    },
+    {
+      "sido": "경상북도",
+      "eupmyeon": "지례면",
+      "BJCD": "4715042000",
+      "sigungu_code": "47150"
+    },
+    {
+      "sido": "경상북도",
+      "eupmyeon": "지천면",
+      "BJCD": "4785031000",
+      "sigungu_code": "47850"
+    },
+    {
+      "sido": "경상북도",
+      "eupmyeon": "내서면",
+      "BJCD": "4725037000",
+      "sigungu_code": "47250"
+    },
+    {
+      "sido": "경상북도",
+      "eupmyeon": "각북면",
+      "BJCD": "4782033000",
+      "sigungu_code": "47820"
+    },
+    {
+      "sido": "경상북도",
+      "eupmyeon": "남천면",
+      "BJCD": "4729037000",
+      "sigungu_code": "47290"
+    },
+    {
+      "sido": "경상북도",
+      "eupmyeon": "춘산면",
+      "BJCD": "4773035000",
+      "sigungu_code": "47730"
+    },
+    {
+      "sido": "경상북도",
+      "eupmyeon": "부항면",
+      "BJCD": "4715043000",
+      "sigungu_code": "47150"
+    },
+    {
+      "sido": "경상북도",
+      "eupmyeon": "물야면",
+      "BJCD": "4792031000",
+      "sigungu_code": "47920"
+    },
+    {
+      "sido": "경상북도",
+      "eupmyeon": "순흥면",
+      "BJCD": "4721037000",
+      "sigungu_code": "47210"
+    },
+    {
+      "sido": "경상북도",
+      "eupmyeon": "화남면",
+      "BJCD": "4723035000",
+      "sigungu_code": "47230",
+      "ambiguous": true
+    },
+    {
+      "sido": "경상북도",
+      "eupmyeon": "화남면",
+      "BJCD": "4725047000",
+      "sigungu_code": "47250",
+      "ambiguous": true
+    },
+    {
+      "sido": "경상북도",
+      "eupmyeon": "내남면",
+      "BJCD": "4713033000",
+      "sigungu_code": "47130"
+    },
+    {
+      "sido": "경상북도",
+      "eupmyeon": "구성면",
+      "BJCD": "4715041000",
+      "sigungu_code": "47150"
+    },
+    {
+      "sido": "경상북도",
+      "eupmyeon": "수비면",
+      "BJCD": "4776034000",
+      "sigungu_code": "47760"
+    },
+    {
+      "sido": "경상북도",
+      "eupmyeon": "안덕면",
+      "BJCD": "4775035000",
+      "sigungu_code": "47750"
+    },
+    {
+      "sido": "경상북도",
+      "eupmyeon": "근남면",
+      "BJCD": "4793033000",
+      "sigungu_code": "47930"
+    },
+    {
+      "sido": "경상북도",
+      "eupmyeon": "진보면",
+      "BJCD": "4775037000",
+      "sigungu_code": "47750"
+    },
+    {
+      "sido": "경상북도",
+      "eupmyeon": "지품면",
+      "BJCD": "4777034000",
+      "sigungu_code": "47770"
+    },
+    {
+      "sido": "경상북도",
+      "eupmyeon": "사곡면",
+      "BJCD": "4773034000",
+      "sigungu_code": "47730"
+    },
+    {
+      "sido": "경상북도",
+      "eupmyeon": "옥산면",
+      "BJCD": "4773033000",
+      "sigungu_code": "47730"
+    },
+    {
+      "sido": "경상북도",
+      "eupmyeon": "가음면",
+      "BJCD": "4773036000",
+      "sigungu_code": "47730"
+    },
+    {
+      "sido": "경상북도",
+      "eupmyeon": "봉성면",
+      "BJCD": "4792032000",
+      "sigungu_code": "47920"
+    },
+    {
+      "sido": "경상북도",
+      "eupmyeon": "화서면",
+      "BJCD": "4725041000",
+      "sigungu_code": "47250"
+    },
+    {
+      "sido": "경상북도",
+      "eupmyeon": "남선면",
+      "BJCD": "4717037000",
+      "sigungu_code": "47170"
+    },
+    {
+      "sido": "경상북도",
+      "eupmyeon": "창수면",
+      "BJCD": "4777038000",
+      "sigungu_code": "47770"
+    },
+    {
+      "sido": "경상북도",
+      "eupmyeon": "영해면",
+      "BJCD": "4777036000",
+      "sigungu_code": "47770"
+    },
+    {
+      "sido": "경상북도",
+      "eupmyeon": "대덕면",
+      "BJCD": "4715044000",
+      "sigungu_code": "47150"
+    },
+    {
+      "sido": "경상북도",
+      "eupmyeon": "자양면",
+      "BJCD": "4723036000",
+      "sigungu_code": "47230"
+    },
+    {
+      "sido": "경상북도",
+      "eupmyeon": "호미곶면",
+      "BJCD": "4711135000",
+      "sigungu_code": "47111"
+    },
+    {
+      "sido": "경상북도",
+      "eupmyeon": "파천면",
+      "BJCD": "4775036000",
+      "sigungu_code": "47750"
+    },
+    {
+      "sido": "경상북도",
+      "eupmyeon": "농암면",
+      "BJCD": "4728037000",
+      "sigungu_code": "47280"
+    },
+    {
+      "sido": "경상북도",
+      "eupmyeon": "가산면",
+      "BJCD": "4785033000",
+      "sigungu_code": "47850"
+    },
+    {
+      "sido": "경상북도",
+      "eupmyeon": "청기면",
+      "BJCD": "4776032000",
+      "sigungu_code": "47760"
+    },
+    {
+      "sido": "경상북도",
+      "eupmyeon": "임동면",
+      "BJCD": "4717040000",
+      "sigungu_code": "47170"
+    },
+    {
+      "sido": "경상북도",
+      "eupmyeon": "석포면",
+      "BJCD": "4792039000",
+      "sigungu_code": "47920"
+    },
+    {
+      "sido": "경상북도",
+      "eupmyeon": "서면",
+      "BJCD": "4713035000",
+      "sigungu_code": "47130",
+      "ambiguous": true
+    },
+    {
+      "sido": "경상북도",
+      "eupmyeon": "서면",
+      "BJCD": "4794031000",
+      "sigungu_code": "47940",
+      "ambiguous": true
+    },
+    {
+      "sido": "경상북도",
+      "eupmyeon": "양남면",
+      "BJCD": "4713032000",
+      "sigungu_code": "47130"
+    },
+    {
+      "sido": "경상북도",
+      "eupmyeon": "석보면",
+      "BJCD": "4776035000",
+      "sigungu_code": "47760"
+    },
+    {
+      "sido": "경상북도",
+      "eupmyeon": "수륜면",
+      "BJCD": "4784033000",
+      "sigungu_code": "47840"
+    },
+    {
+      "sido": "경상북도",
+      "eupmyeon": "쌍림면",
+      "BJCD": "4783037000",
+      "sigungu_code": "47830"
+    },
+    {
+      "sido": "경상북도",
+      "eupmyeon": "춘양면",
+      "BJCD": "4792034000",
+      "sigungu_code": "47920"
+    },
+    {
+      "sido": "경상북도",
+      "eupmyeon": "봉산면",
+      "BJCD": "4715037000",
+      "sigungu_code": "47150"
+    },
+    {
+      "sido": "경상북도",
+      "eupmyeon": "산내면",
+      "BJCD": "4713034000",
+      "sigungu_code": "47130"
+    },
+    {
+      "sido": "경상북도",
+      "eupmyeon": "명호면",
+      "BJCD": "4792037000",
+      "sigungu_code": "47920"
+    },
+    {
+      "sido": "경상북도",
+      "eupmyeon": "주왕산면",
+      "BJCD": "4775031500",
+      "sigungu_code": "47750"
+    },
+    {
+      "sido": "경상북도",
+      "eupmyeon": "소천면",
+      "BJCD": "4792035000",
+      "sigungu_code": "47920"
+    },
+    {
+      "sido": "경상북도",
+      "eupmyeon": "북면",
+      "BJCD": "4793031000",
+      "sigungu_code": "47930",
+      "ambiguous": true
+    },
+    {
+      "sido": "경상북도",
+      "eupmyeon": "북면",
+      "BJCD": "4794032000",
+      "sigungu_code": "47940",
+      "ambiguous": true
+    },
+    {
+      "sido": "경상북도",
+      "eupmyeon": "현동면",
+      "BJCD": "4775033000",
+      "sigungu_code": "47750"
+    },
+    {
+      "sido": "경상북도",
+      "eupmyeon": "단산면",
+      "BJCD": "4721038000",
+      "sigungu_code": "47210"
+    },
+    {
+      "sido": "경상북도",
+      "eupmyeon": "도산면",
+      "BJCD": "4717042000",
+      "sigungu_code": "47170"
+    },
+    {
+      "sido": "경상북도",
+      "eupmyeon": "청송읍",
+      "BJCD": "4775025000",
+      "sigungu_code": "47750"
+    },
+    {
+      "sido": "경상북도",
+      "eupmyeon": "법전면",
+      "BJCD": "4792033000",
+      "sigungu_code": "47920"
+    },
+    {
+      "sido": "경상북도",
+      "eupmyeon": "기북면",
+      "BJCD": "4711336000",
+      "sigungu_code": "47113"
+    },
+    {
+      "sido": "경상북도",
+      "eupmyeon": "장기면",
+      "BJCD": "4711133000",
+      "sigungu_code": "47111"
+    },
+    {
+      "sido": "경상북도",
+      "eupmyeon": "문무대왕면",
+      "BJCD": "4713031500",
+      "sigungu_code": "47130"
+    },
+    {
+      "sido": "경상북도",
+      "eupmyeon": "부남면",
+      "BJCD": "4775032000",
+      "sigungu_code": "47750"
+    },
+    {
+      "sido": "경상북도",
+      "eupmyeon": "남정면",
+      "BJCD": "4777032000",
+      "sigungu_code": "47770"
+    },
+    {
+      "sido": "경상북도",
+      "eupmyeon": "안사면",
+      "BJCD": "4773047000",
+      "sigungu_code": "47730"
+    },
+    {
+      "sido": "경상북도",
+      "eupmyeon": "온정면",
+      "BJCD": "4793036000",
+      "sigungu_code": "47930"
+    },
+    {
+      "sido": "경상북도",
+      "eupmyeon": "길안면",
+      "BJCD": "4717039000",
+      "sigungu_code": "47170"
+    },
+    {
+      "sido": "경상북도",
+      "eupmyeon": "매전면",
+      "BJCD": "4782037000",
+      "sigungu_code": "47820"
+    },
+    {
+      "sido": "경상북도",
+      "eupmyeon": "점곡면",
+      "BJCD": "4773032000",
+      "sigungu_code": "47730"
+    },
+    {
+      "sido": "경상북도",
+      "eupmyeon": "덕곡면",
+      "BJCD": "4783031000",
+      "sigungu_code": "47830"
+    },
+    {
+      "sido": "경상북도",
+      "eupmyeon": "남후면",
+      "BJCD": "4717036000",
+      "sigungu_code": "47170"
+    },
+    {
+      "sido": "경상북도",
+      "eupmyeon": "외서면",
+      "BJCD": "4725043000",
+      "sigungu_code": "47250"
+    },
+    {
+      "sido": "경상북도",
+      "eupmyeon": "마성면",
+      "BJCD": "4728036000",
+      "sigungu_code": "47280"
+    },
+    {
+      "sido": "경상북도",
+      "eupmyeon": "재산면",
+      "BJCD": "4792036000",
+      "sigungu_code": "47920"
+    },
+    {
+      "sido": "경상북도",
+      "eupmyeon": "모서면",
+      "BJCD": "4725039000",
+      "sigungu_code": "47250"
+    },
+    {
+      "sido": "경상북도",
+      "eupmyeon": "축산면",
+      "BJCD": "4777035000",
+      "sigungu_code": "47770"
+    },
+    {
+      "sido": "경상북도",
+      "eupmyeon": "예안면",
+      "BJCD": "4717041000",
+      "sigungu_code": "47170"
+    },
+    {
+      "sido": "경상북도",
+      "eupmyeon": "은척면",
+      "BJCD": "4725044000",
+      "sigungu_code": "47250"
+    },
+    {
+      "sido": "경상북도",
+      "eupmyeon": "신평면",
+      "BJCD": "4773045000",
+      "sigungu_code": "47730"
+    },
+    {
+      "sido": "경상북도",
+      "eupmyeon": "대항면",
+      "BJCD": "4715038000",
+      "sigungu_code": "47150"
+    },
+    {
+      "sido": "경상북도",
+      "eupmyeon": "문경읍",
+      "BJCD": "4728025000",
+      "sigungu_code": "47280"
+    },
+    {
+      "sido": "경상북도",
+      "eupmyeon": "입암면",
+      "BJCD": "4776031000",
+      "sigungu_code": "47760"
+    },
+    {
+      "sido": "경상북도",
+      "eupmyeon": "풍기읍",
+      "BJCD": "4721025000",
+      "sigungu_code": "47210"
+    },
+    {
+      "sido": "경상북도",
+      "eupmyeon": "부석면",
+      "BJCD": "4721039000",
+      "sigungu_code": "47210"
+    },
+    {
+      "sido": "경상북도",
+      "eupmyeon": "금천면",
+      "BJCD": "4782036000",
+      "sigungu_code": "47820"
+    },
+    {
+      "sido": "경상북도",
+      "eupmyeon": "용성면",
+      "BJCD": "4729034000",
+      "sigungu_code": "47290"
+    },
+    {
+      "sido": "경상북도",
+      "eupmyeon": "효자면",
+      "BJCD": "4790042000",
+      "sigungu_code": "47900"
+    },
+    {
+      "sido": "경상북도",
+      "eupmyeon": "일직면",
+      "BJCD": "4717035000",
+      "sigungu_code": "47170"
+    },
+    {
+      "sido": "경상남도",
+      "eupmyeon": "금서면",
+      "BJCD": "4886034000",
+      "sigungu_code": "48860"
+    },
+    {
+      "sido": "경상남도",
+      "eupmyeon": "대양면",
+      "BJCD": "4889041000",
+      "sigungu_code": "48890"
+    },
+    {
+      "sido": "경상남도",
+      "eupmyeon": "진북면",
+      "BJCD": "4812533000",
+      "sigungu_code": "48125"
+    },
+    {
+      "sido": "경상남도",
+      "eupmyeon": "동해면",
+      "BJCD": "4882042000",
+      "sigungu_code": "48820"
+    },
+    {
+      "sido": "경상남도",
+      "eupmyeon": "개천면",
+      "BJCD": "4882038000",
+      "sigungu_code": "48820"
+    },
+    {
+      "sido": "경상남도",
+      "eupmyeon": "칠곡면",
+      "BJCD": "4872032000",
+      "sigungu_code": "48720"
+    },
+    {
+      "sido": "경상남도",
+      "eupmyeon": "차황면",
+      "BJCD": "4886031000",
+      "sigungu_code": "48860"
+    },
+    {
+      "sido": "경상남도",
+      "eupmyeon": "남부면",
+      "BJCD": "4831033000",
+      "sigungu_code": "48310"
+    },
+    {
+      "sido": "경상남도",
+      "eupmyeon": "유곡면",
+      "BJCD": "4872042000",
+      "sigungu_code": "48720"
+    },
+    {
+      "sido": "경상남도",
+      "eupmyeon": "산청읍",
+      "BJCD": "4886025000",
+      "sigungu_code": "48860"
+    },
+    {
+      "sido": "경상남도",
+      "eupmyeon": "가야면",
+      "BJCD": "4889033000",
+      "sigungu_code": "48890"
+    },
+    {
+      "sido": "경상남도",
+      "eupmyeon": "하북면",
+      "BJCD": "4833034000",
+      "sigungu_code": "48330"
+    },
+    {
+      "sido": "경상남도",
+      "eupmyeon": "횡천면",
+      "BJCD": "4885034000",
+      "sigungu_code": "48850"
+    },
+    {
+      "sido": "경상남도",
+      "eupmyeon": "미조면",
+      "BJCD": "4884034000",
+      "sigungu_code": "48840"
+    },
+    {
+      "sido": "경상남도",
+      "eupmyeon": "안의면",
+      "BJCD": "4887036000",
+      "sigungu_code": "48870"
+    },
+    {
+      "sido": "경상남도",
+      "eupmyeon": "신원면",
+      "BJCD": "4888039000",
+      "sigungu_code": "48880"
+    },
+    {
+      "sido": "경상남도",
+      "eupmyeon": "상리면",
+      "BJCD": "4882034000",
+      "sigungu_code": "48820"
+    },
+    {
+      "sido": "경상남도",
+      "eupmyeon": "삼장면",
+      "BJCD": "4886035000",
+      "sigungu_code": "48860"
+    },
+    {
+      "sido": "경상남도",
+      "eupmyeon": "영현면",
+      "BJCD": "4882036000",
+      "sigungu_code": "48820"
+    },
+    {
+      "sido": "경상남도",
+      "eupmyeon": "웅양면",
+      "BJCD": "4888032000",
+      "sigungu_code": "48880"
+    },
+    {
+      "sido": "경상남도",
+      "eupmyeon": "가례면",
+      "BJCD": "4872031000",
+      "sigungu_code": "48720"
+    },
+    {
+      "sido": "경상남도",
+      "eupmyeon": "궁류면",
+      "BJCD": "4872041500",
+      "sigungu_code": "48720"
+    },
+    {
+      "sido": "경상남도",
+      "eupmyeon": "쌍백면",
+      "BJCD": "4889042000",
+      "sigungu_code": "48890"
+    },
+    {
+      "sido": "경상남도",
+      "eupmyeon": "시천면",
+      "BJCD": "4886036000",
+      "sigungu_code": "48860"
+    },
+    {
+      "sido": "경상남도",
+      "eupmyeon": "산내면",
+      "BJCD": "4827034000",
+      "sigungu_code": "48270"
+    },
+    {
+      "sido": "경상남도",
+      "eupmyeon": "성산면",
+      "BJCD": "4874032000",
+      "sigungu_code": "48740"
+    },
+    {
+      "sido": "경상남도",
+      "eupmyeon": "가북면",
+      "BJCD": "4888041000",
+      "sigungu_code": "48880"
+    },
+    {
+      "sido": "경상남도",
+      "eupmyeon": "생초면",
+      "BJCD": "4886033000",
+      "sigungu_code": "48860"
+    },
+    {
+      "sido": "경상남도",
+      "eupmyeon": "원동면",
+      "BJCD": "4833032000",
+      "sigungu_code": "48330"
+    },
+    {
+      "sido": "경상남도",
+      "eupmyeon": "명석면",
+      "BJCD": "4817044000",
+      "sigungu_code": "48170"
+    },
+    {
+      "sido": "경상남도",
+      "eupmyeon": "백전면",
+      "BJCD": "4887039000",
+      "sigungu_code": "48870"
+    },
+    {
+      "sido": "경상남도",
+      "eupmyeon": "삼가면",
+      "BJCD": "4889043000",
+      "sigungu_code": "48890"
+    },
+    {
+      "sido": "경상남도",
+      "eupmyeon": "대의면",
+      "BJCD": "4872033000",
+      "sigungu_code": "48720"
+    },
+    {
+      "sido": "경상남도",
+      "eupmyeon": "서하면",
+      "BJCD": "4887037000",
+      "sigungu_code": "48870"
+    },
+    {
+      "sido": "경상남도",
+      "eupmyeon": "생비량면",
+      "BJCD": "4886039000",
+      "sigungu_code": "48860"
+    },
+    {
+      "sido": "경상남도",
+      "eupmyeon": "가회면",
+      "BJCD": "4889044000",
+      "sigungu_code": "48890"
+    },
+    {
+      "sido": "경상남도",
+      "eupmyeon": "마천면",
+      "BJCD": "4887031000",
+      "sigungu_code": "48870"
+    },
+    {
+      "sido": "경상남도",
+      "eupmyeon": "옥종면",
+      "BJCD": "4885041000",
+      "sigungu_code": "48850"
+    },
+    {
+      "sido": "경상남도",
+      "eupmyeon": "상동면",
+      "BJCD": "4825036000",
+      "sigungu_code": "48250",
+      "ambiguous": true
+    },
+    {
+      "sido": "경상남도",
+      "eupmyeon": "상동면",
+      "BJCD": "4827032000",
+      "sigungu_code": "48270",
+      "ambiguous": true
+    },
+    {
+      "sido": "경상남도",
+      "eupmyeon": "고제면",
+      "BJCD": "4888033000",
+      "sigungu_code": "48880"
+    },
+    {
+      "sido": "경상남도",
+      "eupmyeon": "상주면",
+      "BJCD": "4884032000",
+      "sigungu_code": "48840"
+    },
+    {
+      "sido": "경상남도",
+      "eupmyeon": "주상면",
+      "BJCD": "4888031000",
+      "sigungu_code": "48880"
+    },
+    {
+      "sido": "경상남도",
+      "eupmyeon": "단장면",
+      "BJCD": "4827035000",
+      "sigungu_code": "48270"
+    },
+    {
+      "sido": "경상남도",
+      "eupmyeon": "무안면",
+      "BJCD": "4827038000",
+      "sigungu_code": "48270"
+    },
+    {
+      "sido": "경상남도",
+      "eupmyeon": "동부면",
+      "BJCD": "4831032000",
+      "sigungu_code": "48310"
+    },
+    {
+      "sido": "경상남도",
+      "eupmyeon": "진전면",
+      "BJCD": "4812534000",
+      "sigungu_code": "48125"
+    },
+    {
+      "sido": "경상남도",
+      "eupmyeon": "도산면",
+      "BJCD": "4822033000",
+      "sigungu_code": "48220"
+    },
+    {
+      "sido": "경상남도",
+      "eupmyeon": "병곡면",
+      "BJCD": "4887040000",
+      "sigungu_code": "48870"
+    },
+    {
+      "sido": "경상남도",
+      "eupmyeon": "휴천면",
+      "BJCD": "4887032000",
+      "sigungu_code": "48870"
+    },
+    {
+      "sido": "경상남도",
+      "eupmyeon": "북상면",
+      "BJCD": "4888034000",
+      "sigungu_code": "48880"
+    },
+    {
+      "sido": "경상남도",
+      "eupmyeon": "신등면",
+      "BJCD": "4886040000",
+      "sigungu_code": "48860"
+    },
+    {
+      "sido": "경상남도",
+      "eupmyeon": "한산면",
+      "BJCD": "4822036000",
+      "sigungu_code": "48220"
+    },
+    {
+      "sido": "경상남도",
+      "eupmyeon": "야로면",
+      "BJCD": "4889034000",
+      "sigungu_code": "48890"
+    },
+    {
+      "sido": "경상남도",
+      "eupmyeon": "오부면",
+      "BJCD": "4886032000",
+      "sigungu_code": "48860"
+    },
+    {
+      "sido": "경상남도",
+      "eupmyeon": "남하면",
+      "BJCD": "4888038000",
+      "sigungu_code": "48880"
+    },
+    {
+      "sido": "경상남도",
+      "eupmyeon": "청암면",
+      "BJCD": "4885040000",
+      "sigungu_code": "48850"
+    },
+    {
+      "sido": "경상남도",
+      "eupmyeon": "적량면",
+      "BJCD": "4885033000",
+      "sigungu_code": "48850"
+    },
+    {
+      "sido": "경상남도",
+      "eupmyeon": "삼동면",
+      "BJCD": "4884033000",
+      "sigungu_code": "48840"
+    },
+    {
+      "sido": "경상남도",
+      "eupmyeon": "미천면",
+      "BJCD": "4817043000",
+      "sigungu_code": "48170"
+    },
+    {
+      "sido": "경상남도",
+      "eupmyeon": "봉수면",
+      "BJCD": "4872040000",
+      "sigungu_code": "48720"
+    },
+    {
+      "sido": "경상남도",
+      "eupmyeon": "청도면",
+      "BJCD": "4827039000",
+      "sigungu_code": "48270"
+    },
+    {
+      "sido": "경상남도",
+      "eupmyeon": "구산면",
+      "BJCD": "4812531000",
+      "sigungu_code": "48125"
+    },
+    {
+      "sido": "경상남도",
+      "eupmyeon": "위천면",
+      "BJCD": "4888035000",
+      "sigungu_code": "48880"
+    },
+    {
+      "sido": "경상남도",
+      "eupmyeon": "여항면",
+      "BJCD": "4873039000",
+      "sigungu_code": "48730"
+    },
+    {
+      "sido": "경상남도",
+      "eupmyeon": "묘산면",
+      "BJCD": "4889032000",
+      "sigungu_code": "48890"
+    },
+    {
+      "sido": "경상남도",
+      "eupmyeon": "사량면",
+      "BJCD": "4822037000",
+      "sigungu_code": "48220"
+    },
+    {
+      "sido": "경상남도",
+      "eupmyeon": "용주면",
+      "BJCD": "4889046000",
+      "sigungu_code": "48890"
+    },
+    {
+      "sido": "경상남도",
+      "eupmyeon": "삼산면",
+      "BJCD": "4882031000",
+      "sigungu_code": "48820"
+    },
+    {
+      "sido": "경상남도",
+      "eupmyeon": "화개면",
+      "BJCD": "4885031000",
+      "sigungu_code": "48850"
+    },
+    {
+      "sido": "경상남도",
+      "eupmyeon": "서상면",
+      "BJCD": "4887038000",
+      "sigungu_code": "48870"
+    }
+  ],
+  "unmatched": [
+    {
+      "sido": "인천광역시",
+      "eupmyeon": "대청면"
+    },
+    {
+      "sido": "강원특별자치도",
+      "eupmyeon": "현내면"
+    },
+    {
+      "sido": "강원특별자치도",
+      "eupmyeon": "토정중앙면"
+    },
+    {
+      "sido": "강원특별자치도",
+      "eupmyeon": "거진읍"
+    },
+    {
+      "sido": "전북특별자치도",
+      "eupmyeon": "천천면정읍"
+    }
+  ]
+}

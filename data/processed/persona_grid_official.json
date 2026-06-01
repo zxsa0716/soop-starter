@@ -1,0 +1,59 @@
+{
+  "P-01": {
+    "name": "평창 진부면",
+    "BJCD": "5176036000",
+    "sigungu_code": "5176",
+    "sigungu_name": "평창군",
+    "eupmyeon": "진부면",
+    "nx": 87,
+    "ny": 129,
+    "lat": 37.6346,
+    "lon": 128.5554,
+    "elevation_m": 838,
+    "sido": "강원특별자치도",
+    "sanchon_official": true
+  },
+  "P-02": {
+    "name": "충주 수안보면",
+    "BJCD": "4313032500",
+    "sigungu_code": "4313",
+    "sigungu_name": "충주시",
+    "eupmyeon": "수안보면",
+    "nx": 78,
+    "ny": 111,
+    "lat": 36.8444,
+    "lon": 127.997,
+    "elevation_m": 300,
+    "sido": "충청북도",
+    "sanchon_official": true,
+    "fix_note": "원본 살미면(BJCD 4313031000)은 산촌 목록 미포함 — 공식 산촌 수안보면으로 정정"
+  },
+  "P-03": {
+    "name": "진안 부귀면",
+    "BJCD": "5272038000",
+    "sigungu_code": "5272",
+    "sigungu_name": "진안군",
+    "eupmyeon": "부귀면",
+    "nx": 67,
+    "ny": 89,
+    "lat": 35.834,
+    "lon": 127.3628,
+    "elevation_m": 456,
+    "sido": "전북특별자치도",
+    "sanchon_official": true
+  },
+  "P-04": {
+    "name": "영양 일월면",
+    "BJCD": "4776033000",
+    "sigungu_code": "4776",
+    "sigungu_name": "영양군",
+    "eupmyeon": "일월면",
+    "nx": 98,
+    "ny": 109,
+    "lat": 36.6995,
+    "lon": 129.131,
+    "elevation_m": 487,
+    "sido": "경상북도",
+    "sanchon_official": true
+  }
+}

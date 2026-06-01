@@ -70,6 +70,9 @@ rename_refs.py
 # Streamlit 번들 데이터
 streamlit_app/data/
 
+# 공모전 제출 산출물 (사내 보안 문서 포함)
+submission/
+
 # 빌드 산출물
 *.pptx
 *.docx

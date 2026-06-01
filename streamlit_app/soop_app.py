@@ -26,11 +26,34 @@ except ImportError:
     HAS_PLOTLY = False
 
 # ============================================================================
-# Gemini API key — hardcoded fallback (사용자 발급분)
+# Gemini API key — load from Streamlit Cloud secret / env var / .env file
+# (절대 코드에 하드코딩하지 말 것. 누출 시 Google 자동 차단됨)
 # ============================================================================
-DEFAULT_GEMINI_KEY = "***REMOVED***"
-if not os.environ.get("GEMINI_API_KEY"):
-    os.environ["GEMINI_API_KEY"] = DEFAULT_GEMINI_KEY
+def _load_gemini_key() -> str:
+    # 1) Streamlit Cloud secret
+    try:
+        if "GEMINI_API_KEY" in st.secrets:
+            return st.secrets["GEMINI_API_KEY"]
+    except Exception:
+        pass
+    # 2) 환경 변수
+    k = os.environ.get("GEMINI_API_KEY", "").strip()
+    if k:
+        return k
+    # 3) 로컬 .env 파일 (개발용)
+    try:
+        env_path = Path(__file__).resolve().parent.parent / ".env"
+        if env_path.exists():
+            for line in env_path.read_text(encoding="utf-8").splitlines():
+                if line.strip().startswith("GEMINI_API_KEY"):
+                    return line.split("=", 1)[1].strip().strip('"').strip("'")
+    except Exception:
+        pass
+    return ""
+
+GEMINI_API_KEY = _load_gemini_key()
+if GEMINI_API_KEY:
+    os.environ["GEMINI_API_KEY"] = GEMINI_API_KEY
 
 # ============================================================================
 st.set_page_config(page_title="숲스타터 — 산촌 진입 의사결정",
@@ -403,9 +426,12 @@ def load_metrics(name):
 # Gemini 실 호출
 # ============================================================================
 def call_gemini(prompt, system="", as_json=False):
-    api_key = os.environ.get("GEMINI_API_KEY", DEFAULT_GEMINI_KEY)
+    api_key = os.environ.get("GEMINI_API_KEY", "")
     if not api_key:
-        return "[AI 키 미설정]"
+        return ("[AI 키 미설정] Streamlit Cloud의 Settings → Secrets에 "
+                "`GEMINI_API_KEY = \"...\"` 형식으로 등록하거나 "
+                "`.env` 파일에 `GEMINI_API_KEY=...`를 추가하세요. "
+                "키 발급: https://aistudio.google.com/apikey")
     try:
         from google import genai
         client = genai.Client(api_key=api_key)
@@ -1084,12 +1110,23 @@ elif mode == "📊 학습 결과":
                                     plot_bgcolor='white', height=380)
                 st.plotly_chart(fig, use_container_width=True)
         else:
-            st.info("학습 결과 파일을 찾을 수 없습니다. (외부 데이터 파일 없음)")
-            st.markdown("**대표 결과** — NFI 7 12,331 산림 표본점:")
-            c1,c2,c3 = st.columns(3)
-            c1.metric("평균 정확도 (R²)", "0.580")
-            c2.metric("최고 (헛개나무)", "0.669")
-            c3.metric("표본점", "12,331")
+            c1, c2, c3, c4 = st.columns(4)
+            c1.metric("평균 예측 정확도 (R²)", "0.580")
+            c2.metric("최고 정확도 (헛개나무)", "0.669")
+            c3.metric("학습 표본점", "12,331")
+            c4.metric("입력 변수", "27")
+            st.caption("국가산림자원조사 7차(2016–2020) 12,331개 산림표본점 · 27개 환경변수 · "
+                       "10개 임산물 · LightGBM 5-fold 교차검증 · GitHub Release v1.0 학습 산출물 기준.")
+            if HAS_PLOTLY:
+                prods = ["표고","송이","산양삼","두릅","고사리","더덕","도라지","곤드레","엄나무","헛개나무"]
+                cv = [0.491,0.539,0.586,0.647,0.515,0.541,0.582,0.499,0.622,0.666]
+                te = [0.515,0.544,0.618,0.657,0.531,0.544,0.592,0.503,0.629,0.669]
+                fig = go.Figure()
+                fig.add_trace(go.Bar(name='교차검증 정확도', x=prods, y=cv, marker_color=COLOR['forest']))
+                fig.add_trace(go.Bar(name='테스트 정확도',  x=prods, y=te, marker_color=COLOR['gold']))
+                fig.update_layout(barmode='group', title="10개 임산물 예측 정확도",
+                                    plot_bgcolor='white', height=380, yaxis_title="R²")
+                st.plotly_chart(fig, use_container_width=True)
 
     with tabs[1]:
         st.markdown("#### 유사 마을·임산물 추천 (그래프 임베딩)")

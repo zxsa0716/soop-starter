@@ -1,0 +1,175 @@
+{
+  "trained_at": "2026-05-27T17:08:02.140079",
+  "data_source": "NFI 5(2006-10) + NFI 6(2011-15) + NFI 7(2016-20)",
+  "n_sigungu_total": 222,
+  "n_sigungu_calibration": 178,
+  "n_sigungu_stacking": 178,
+  "calibration": {
+    "prophet_alone_mape_median_pct": 93.38259975939175,
+    "prophet_lgbm_stacking_mape_median_pct": 72.53755278673037,
+    "stacking_improvement_pct": 22.32219602620876
+  },
+  "persona_simulations": {
+    "P-01": {
+      "growth_factor": 1.3,
+      "note": "Prophet trend factor",
+      "annual_points": [
+        {
+          "year": 1,
+          "cumulative_p10_won": 672900,
+          "cumulative_p50_won": 8391105,
+          "cumulative_p90_won": 21800501
+        },
+        {
+          "year": 2,
+          "cumulative_p10_won": 14482680,
+          "cumulative_p50_won": 27011523,
+          "cumulative_p90_won": 45088715
+        },
+        {
+          "year": 3,
+          "cumulative_p10_won": 29090664,
+          "cumulative_p50_won": 44936912,
+          "cumulative_p90_won": 66428775
+        },
+        {
+          "year": 4,
+          "cumulative_p10_won": 44440980,
+          "cumulative_p50_won": 62594289,
+          "cumulative_p90_won": 86513539
+        },
+        {
+          "year": 5,
+          "cumulative_p10_won": 60510409,
+          "cumulative_p50_won": 81524151,
+          "cumulative_p90_won": 108709292
+        }
+      ],
+      "cumulative_5y_p10_won": 60510409,
+      "cumulative_5y_p50_won": 81524151,
+      "cumulative_5y_p90_won": 108709292,
+      "nong_eo_chon_median_p50_won": 36000000
+    },
+    "P-02": {
+      "growth_factor": 1.3,
+      "note": "Prophet trend factor",
+      "annual_points": [
+        {
+          "year": 1,
+          "cumulative_p10_won": 488339,
+          "cumulative_p50_won": 8459679,
+          "cumulative_p90_won": 20722694
+        },
+        {
+          "year": 2,
+          "cumulative_p10_won": 14616699,
+          "cumulative_p50_won": 27059879,
+          "cumulative_p90_won": 44584628
+        },
+        {
+          "year": 3,
+          "cumulative_p10_won": 29547746,
+          "cumulative_p50_won": 45299741,
+          "cumulative_p90_won": 66034968
+        },
+        {
+          "year": 4,
+          "cumulative_p10_won": 44372066,
+          "cumulative_p50_won": 63365387,
+          "cumulative_p90_won": 88033186
+        },
+        {
+          "year": 5,
+          "cumulative_p10_won": 60185876,
+          "cumulative_p50_won": 80693434,
+          "cumulative_p90_won": 108687814
+        }
+      ],
+      "cumulative_5y_p10_won": 60185876,
+      "cumulative_5y_p50_won": 80693434,
+      "cumulative_5y_p90_won": 108687814,
+      "nong_eo_chon_median_p50_won": 36000000
+    },
+    "P-03": {
+      "growth_factor": 1.3,
+      "note": "Prophet trend factor",
+      "annual_points": [
+        {
+          "year": 1,
+          "cumulative_p10_won": 424044,
+          "cumulative_p50_won": 8631568,
+          "cumulative_p90_won": 22335076
+        },
+        {
+          "year": 2,
+          "cumulative_p10_won": 14757682,
+          "cumulative_p50_won": 27566655,
+          "cumulative_p90_won": 45608384
+        },
+        {
+          "year": 3,
+          "cumulative_p10_won": 29362879,
+          "cumulative_p50_won": 45395671,
+          "cumulative_p90_won": 67331150
+        },
+        {
+          "year": 4,
+          "cumulative_p10_won": 44798119,
+          "cumulative_p50_won": 62725434,
+          "cumulative_p90_won": 89627205
+        },
+        {
+          "year": 5,
+          "cumulative_p10_won": 59635481,
+          "cumulative_p50_won": 80856845,
+          "cumulative_p90_won": 108508352
+        }
+      ],
+      "cumulative_5y_p10_won": 59635481,
+      "cumulative_5y_p50_won": 80856845,
+      "cumulative_5y_p90_won": 108508352,
+      "nong_eo_chon_median_p50_won": 36000000
+    },
+    "P-04": {
+      "growth_factor": 1.3,
+      "note": "Prophet trend factor",
+      "annual_points": [
+        {
+          "year": 1,
+          "cumulative_p10_won": 579498,
+          "cumulative_p50_won": 8654594,
+          "cumulative_p90_won": 22218480
+        },
+        {
+          "year": 2,
+          "cumulative_p10_won": 14618255,
+          "cumulative_p50_won": 26592730,
+          "cumulative_p90_won": 44072021
+        },
+        {
+          "year": 3,
+          "cumulative_p10_won": 28917214,
+          "cumulative_p50_won": 44665609,
+          "cumulative_p90_won": 66221309
+        },
+        {
+          "year": 4,
+          "cumulative_p10_won": 44057921,
+          "cumulative_p50_won": 62932412,
+          "cumulative_p90_won": 88804243
+        },
+        {
+          "year": 5,
+          "cumulative_p10_won": 59785326,
+          "cumulative_p50_won": 81723153,
+          "cumulative_p90_won": 111569546
+        }
+      ],
+      "cumulative_5y_p10_won": 59785326,
+      "cumulative_5y_p50_won": 81723153,
+      "cumulative_5y_p90_won": 111569546,
+      "nong_eo_chon_median_p50_won": 36000000
+    }
+  },
+  "method": "Prophet trend + LGBM residual stacking + Bootstrap MC n=1000"
+}

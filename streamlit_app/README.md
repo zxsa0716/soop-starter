@@ -11,11 +11,20 @@
 ```cmd
 cd E:\forestLLM\streamlit_app
 pip install -r requirements.txt
-set GEMINI_API_KEY=AIzaSy...
+set GEMINI_API_KEY=AIzaSy...   :: 본인 발급분으로 교체
 streamlit run soop_app.py
 ```
 
 → 브라우저에서 자동으로 http://localhost:8501 열림
+
+### Gemini API 키 안전한 설정 방법
+
+본 앱은 다음 우선순위로 키를 자동 탐색한다 (코드에 하드코딩 금지):
+1. **Streamlit Cloud Secret** — 운영 배포용. `share.streamlit.io → ⋮ → Settings → Secrets`에 `GEMINI_API_KEY = "AIzaSy..."` 형식으로 등록
+2. **환경변수 `GEMINI_API_KEY`** — 로컬 실행용
+3. **`E:\forestLLM\.env` 파일** — 로컬 개발용 (`.gitignore`에 등록되어 commit 차단됨)
+
+키 발급: https://aistudio.google.com/apikey (무료)
 
 ## 9가지 모드
 
